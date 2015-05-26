@@ -1,0 +1,57 @@
+# http session
+data/session/
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+# Eclipse workspace file
+.metadata
+
+# Temporary Build files
+etch/.arm_cfg
+
+# Temporary Build Version Info
+etch/version-sdk
+
+# OSX files
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xccheckout
+
+
+# Sublime Text files
+*.sublime-*
+
+*.swp
