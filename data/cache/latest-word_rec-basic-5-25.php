@@ -54,9 +54,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://106.245.233.50/bbs/board.php?bo_table=word_rec&amp;sca=',
-    'href' => 'http://106.245.233.50/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
-    'comment_href' => 'http://106.245.233.50/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
+    'ca_name_href' => 'http://www.jubinna.com/bbs/board.php?bo_table=word_rec&amp;sca=',
+    'href' => 'http://www.jubinna.com/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
+    'comment_href' => 'http://www.jubinna.com/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://106.245.233.50/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=1',
-      2 => 'http://106.245.233.50/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=2',
+      1 => 'http://www.jubinna.com/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=1',
+      2 => 'http://www.jubinna.com/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=2',
     ),
     'link_hit' => 
     array (
