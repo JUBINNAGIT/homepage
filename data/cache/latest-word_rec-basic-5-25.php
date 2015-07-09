@@ -19,7 +19,7 @@ $list=array (
     'wr_link2' => '',
     'wr_link1_hit' => '0',
     'wr_link2_hit' => '0',
-    'wr_hit' => '7',
+    'wr_hit' => '8',
     'wr_good' => '0',
     'wr_nogood' => '0',
     'mb_id' => 'webmanager',
@@ -54,9 +54,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://www.jubinna.com/bbs/board.php?bo_table=word_rec&amp;sca=',
-    'href' => 'http://www.jubinna.com/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
-    'comment_href' => 'http://www.jubinna.com/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
+    'ca_name_href' => 'http://localhost/jubinna/bbs/board.php?bo_table=word_rec&amp;sca=',
+    'href' => 'http://localhost/jubinna/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
+    'comment_href' => 'http://localhost/jubinna/bbs/board.php?bo_table=word_rec&amp;wr_id=1',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://www.jubinna.com/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=1',
-      2 => 'http://www.jubinna.com/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=2',
+      1 => 'http://localhost/jubinna/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=1',
+      2 => 'http://localhost/jubinna/bbs/link.php?bo_table=word_rec&amp;wr_id=1&amp;no=2',
     ),
     'link_hit' => 
     array (
