@@ -1,6 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit;
 
+
 // 외부로그인
 function outlogin($skin_dir='basic')
 {
@@ -13,13 +14,8 @@ function outlogin($skin_dir='basic')
         $point = number_format($member['mb_point']);
     }
 
-    if (G5_IS_MOBILE) {
-        $outlogin_skin_path = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/outlogin/'.$skin_dir;
-        $outlogin_skin_url = G5_MOBILE_URL.'/'.G5_SKIN_DIR.'/outlogin/'.$skin_dir;
-    } else {
-        $outlogin_skin_path = G5_SKIN_PATH.'/outlogin/'.$skin_dir;
-        $outlogin_skin_url = G5_SKIN_URL.'/outlogin/'.$skin_dir;
-    }
+    $outlogin_skin_path = THEMES_PATH.'/'.G5_SKIN_DIR.'/outlogin/'.$skin_dir;
+    $outlogin_skin_url = THEMES_URL.'/'.G5_SKIN_DIR.'/outlogin/'.$skin_dir;
 
     // 읽지 않은 쪽지가 있다면
     if ($is_member) {

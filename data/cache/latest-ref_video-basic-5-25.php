@@ -79,7 +79,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/jubinna/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://localhost/jubinna/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
   1 => 
   array (
@@ -159,6 +159,6 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/jubinna/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://localhost/jubinna/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
 )?>

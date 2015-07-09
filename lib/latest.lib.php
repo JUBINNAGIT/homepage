@@ -10,13 +10,8 @@ function latest($skin_dir='', $bo_table, $rows=10, $subject_len=40, $cache_time=
 
     if (!$skin_dir) $skin_dir = 'basic';
 
-    if(G5_IS_MOBILE) {
-        $latest_skin_path = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/latest/'.$skin_dir;
-        $latest_skin_url  = G5_MOBILE_URL.'/'.G5_SKIN_DIR.'/latest/'.$skin_dir;
-    } else {
-        $latest_skin_path = G5_SKIN_PATH.'/latest/'.$skin_dir;
-        $latest_skin_url  = G5_SKIN_URL.'/latest/'.$skin_dir;
-    }
+    $latest_skin_path = THEMES_PATH.'/'.G5_SKIN_DIR.'/latest/'.$skin_dir;
+    $latest_skin_url  = THEMES_URL.'/'.G5_SKIN_DIR.'/latest/'.$skin_dir;
 
     $cache_fwrite = false;
     if(G5_USE_CACHE) {

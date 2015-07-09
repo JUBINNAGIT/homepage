@@ -25,7 +25,7 @@ function get_skin_select($skin_gubun, $id, $name, $selected='', $event='')
 // 모바일 스킨디렉토리를 SELECT 형식으로 얻음
 function get_mobile_skin_select($skin_gubun, $id, $name, $selected='', $event='')
 {
-    $skins = get_skin_dir($skin_gubun, G5_MOBILE_PATH.'/'.G5_SKIN_DIR);
+    $skins = get_skin_dir($skin_gubun);
     $str = "<select id=\"$id\" name=\"$name\" $event>\n";
     for ($i=0; $i<count($skins); $i++) {
         if ($i == 0) $str .= "<option value=\"\">선택</option>";

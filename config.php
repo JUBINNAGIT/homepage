@@ -50,6 +50,7 @@ define('G5_CAPTCHA_DIR',    'kcaptcha');
 define('G5_EDITOR_DIR',     'editor');
 define('G5_MOBILE_DIR',     'mobile');
 define('G5_OKNAME_DIR',     'okname');
+define('G5_THEMES_DIR',     'themes');
 
 define('G5_KCPCERT_DIR',    'kcpcert');
 define('G5_LGXPAY_DIR',     'lgxpay');
@@ -81,7 +82,6 @@ define('G5_CSS_URL',        G5_URL.'/'.G5_CSS_DIR);
 define('G5_DATA_URL',       G5_URL.'/'.G5_DATA_DIR);
 define('G5_IMG_URL',        G5_URL.'/'.G5_IMG_DIR);
 define('G5_JS_URL',         G5_URL.'/'.G5_JS_DIR);
-define('G5_SKIN_URL',       G5_URL.'/'.G5_SKIN_DIR);
 define('G5_PLUGIN_URL',     G5_URL.'/'.G5_PLUGIN_DIR);
 define('G5_CAPTCHA_URL',    G5_PLUGIN_URL.'/'.G5_CAPTCHA_DIR);
 define('G5_EDITOR_URL',     G5_PLUGIN_URL.'/'.G5_EDITOR_DIR);
@@ -91,6 +91,7 @@ define('G5_LGXPAY_URL',     G5_PLUGIN_URL.'/'.G5_LGXPAY_DIR);
 define('G5_SNS_URL',        G5_PLUGIN_URL.'/'.G5_SNS_DIR);
 define('G5_SYNDI_URL',      G5_PLUGIN_URL.'/'.G5_SYNDI_DIR);
 define('G5_MOBILE_URL',     G5_URL.'/'.G5_MOBILE_DIR);
+define('G5_THEMES_URL',     G5_URL.'/'.G5_THEMES_DIR);
 
 // PATH 는 서버상에서의 절대경로
 define('G5_ADMIN_PATH',     G5_PATH.'/'.G5_ADMIN_DIR);
@@ -99,12 +100,12 @@ define('G5_DATA_PATH',      G5_PATH.'/'.G5_DATA_DIR);
 define('G5_EXTEND_PATH',    G5_PATH.'/'.G5_EXTEND_DIR);
 define('G5_LIB_PATH',       G5_PATH.'/'.G5_LIB_DIR);
 define('G5_PLUGIN_PATH',    G5_PATH.'/'.G5_PLUGIN_DIR);
-define('G5_SKIN_PATH',      G5_PATH.'/'.G5_SKIN_DIR);
 define('G5_MOBILE_PATH',    G5_PATH.'/'.G5_MOBILE_DIR);
 define('G5_SESSION_PATH',   G5_DATA_PATH.'/'.G5_SESSION_DIR);
 define('G5_CAPTCHA_PATH',   G5_PLUGIN_PATH.'/'.G5_CAPTCHA_DIR);
 define('G5_EDITOR_PATH',    G5_PLUGIN_PATH.'/'.G5_EDITOR_DIR);
 define('G5_OKNAME_PATH',    G5_PLUGIN_PATH.'/'.G5_OKNAME_DIR);
+define('G5_THEMES_PATH',    G5_PATH.'/'.G5_THEMES_DIR);
 
 define('G5_KCPCERT_PATH',   G5_PLUGIN_PATH.'/'.G5_KCPCERT_DIR);
 define('G5_LGXPAY_PATH',    G5_PLUGIN_PATH.'/'.G5_LGXPAY_DIR);

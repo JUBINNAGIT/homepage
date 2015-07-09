@@ -512,38 +512,46 @@ if ($is_admin != 'super') {
     }
 }
 
+define('G5_SKIN_URL',       G5_URL.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR);
+define('G5_SKIN_PATH',      G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR);
 
 //==============================================================================
 // 스킨경로
 //------------------------------------------------------------------------------
 if (G5_IS_MOBILE) {
-    $board_skin_path    = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
-    $board_skin_url     = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
-    $member_skin_path   = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/member/'.$config['cf_mobile_member_skin'];
-    $member_skin_url    = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/member/'.$config['cf_mobile_member_skin'];
-    $new_skin_path      = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/new/'.$config['cf_mobile_new_skin'];
-    $new_skin_url       = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/new/'.$config['cf_mobile_new_skin'];
-    $search_skin_path   = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/search/'.$config['cf_mobile_search_skin'];
-    $search_skin_url    = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/search/'.$config['cf_mobile_search_skin'];
-    $connect_skin_path  = G5_MOBILE_PATH.'/'.G5_SKIN_DIR.'/connect/'.$config['cf_mobile_connect_skin'];
-    $connect_skin_url   = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/connect/'.$config['cf_mobile_connect_skin'];
-    $faq_skin_path      = G5_MOBILE_PATH .'/'.G5_SKIN_DIR.'/faq/'.$config['cf_mobile_faq_skin'];
-    $faq_skin_url       = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/faq/'.$config['cf_mobile_faq_skin'];
+    $board_skin_path    = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
+    $board_skin_url     = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/board/'.$board['bo_mobile_skin'];
+    $member_skin_path   = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/member/'.$config['cf_mobile_member_skin'];
+    $member_skin_url    = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/member/'.$config['cf_mobile_member_skin'];
+    $new_skin_path      = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/new/'.$config['cf_mobile_new_skin'];
+    $new_skin_url       = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/new/'.$config['cf_mobile_new_skin'];
+    $search_skin_path   = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/search/'.$config['cf_mobile_search_skin'];
+    $search_skin_url    = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/search/'.$config['cf_mobile_search_skin'];
+    $connect_skin_path  = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/connect/'.$config['cf_mobile_connect_skin'];
+    $connect_skin_url   = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/connect/'.$config['cf_mobile_connect_skin'];
+    $faq_skin_path      = G5_MOBILE_PATH .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/faq/'.$config['cf_mobile_faq_skin'];
+    $faq_skin_url       = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/faq/'.$config['cf_mobile_faq_skin'];
+    $themes_path        = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'];
+    $themes_url         = G5_MOBILE_URL.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'];
 } else {
-    $board_skin_path    = G5_SKIN_PATH.'/board/'.$board['bo_skin'];
-    $board_skin_url     = G5_SKIN_URL .'/board/'.$board['bo_skin'];
-    $member_skin_path   = G5_SKIN_PATH.'/member/'.$config['cf_member_skin'];
-    $member_skin_url    = G5_SKIN_URL .'/member/'.$config['cf_member_skin'];
-    $new_skin_path      = G5_SKIN_PATH.'/new/'.$config['cf_new_skin'];
-    $new_skin_url       = G5_SKIN_URL .'/new/'.$config['cf_new_skin'];
-    $search_skin_path   = G5_SKIN_PATH.'/search/'.$config['cf_search_skin'];
-    $search_skin_url    = G5_SKIN_URL .'/search/'.$config['cf_search_skin'];
-    $connect_skin_path  = G5_SKIN_PATH.'/connect/'.$config['cf_connect_skin'];
-    $connect_skin_url   = G5_SKIN_URL .'/connect/'.$config['cf_connect_skin'];
-    $faq_skin_path      = G5_SKIN_PATH.'/faq/'.$config['cf_faq_skin'];
-    $faq_skin_url       = G5_SKIN_URL.'/faq/'.$config['cf_faq_skin'];
+    $board_skin_path    = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/board/'.$board['bo_skin'];
+    $board_skin_url     = G5_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/board/'.$board['bo_skin'];
+    $member_skin_path   = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/member/'.$config['cf_member_skin'];
+    $member_skin_url    = G5_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/member/'.$config['cf_member_skin'];
+    $new_skin_path      = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/new/'.$config['cf_new_skin'];
+    $new_skin_url       = G5_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/new/'.$config['cf_new_skin'];
+    $search_skin_path   = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/search/'.$config['cf_search_skin'];
+    $search_skin_url    = G5_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/search/'.$config['cf_search_skin'];
+    $connect_skin_path  = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/connect/'.$config['cf_connect_skin'];
+    $connect_skin_url   = G5_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/connect/'.$config['cf_connect_skin'];
+    $faq_skin_path      = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/faq/'.$config['cf_faq_skin'];
+    $faq_skin_url       = G5_URL.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/faq/'.$config['cf_faq_skin'];
+    $themes_path        = G5_THEMES_PATH.'/'.$config['cf_themes'];
+    $themes_url         = G5_THEMES_URL.'/'.$config['cf_themes'];
 }
 //==============================================================================
+define('THEMES_PATH', $themes_path);
+define('THEMES_URL', $themes_url);
 
 
 // 방문자수의 접속을 남김
