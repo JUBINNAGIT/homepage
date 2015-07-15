@@ -44,19 +44,18 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/main.css">', 1);
     </div>
     
     <div class="design_shape">
-        <div class="page">
-        </div>
-        <div class="btn">
-        </div>
-        <div class="visual_line">
-        </div>
-        <div class="shadow">
-        </div>
+        <div class="subject">Realize<br><font style="color:black">Bible</font></div>
+        <div class="subject_">놀라운 성경이야기</div>
+        <div class="page"></div>
+        <div class="btn"></div>
+        <div class="visual_line"></div>
+        <div class="shadow"></div>
         <div class="main_wrap">
             <div class="left"></div>
             <div class="right"></div>
             <div class="main"></div>
             <div class="line"></div>
+            <div class="Layer_100"></div>
         </div>
         <div class="gallery">
             <div class="title"></div>

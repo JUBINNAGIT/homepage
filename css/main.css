@@ -196,15 +196,6 @@
   height: 987px;
   z-index: 17;
 }
-.design_shape .light {
-  background-image: url("../assets/img/light.png");
-  position: absolute;
-  left: -254px;
-  top: -127px;
-  width: 1233px;
-  height: 611px;
-  z-index: 16;
-}
 .design_shape .page {
   background-image: url("../assets/img/01_02030405.png");
   position: absolute;
@@ -214,7 +205,7 @@
   height: 79px;
   z-index: 15;
 }
-.btn {
+.design_shape .btn {
   background-image: url("../assets/img/btn.png");
   position: absolute;
   left: 389px;
@@ -222,6 +213,28 @@
   width: 153px;
   height: 133px;
   z-index: 14;
+}
+.design_shape .subject {
+  font-size: 66.667px;
+  font-family: "HaanYGodic24";
+  color: rgb(137, 137, 137);
+  line-height: 0.875;
+  text-align: left;
+  position: absolute;
+  left: 203px;
+  top: 331.101px;
+  z-index: 116;
+}
+.design_shape .subject_ {
+  font-size: 25px;
+  font-family: "HaanYGodic24";
+  color: rgb(85, 85, 85);
+  line-height: 2.333;
+  text-align: left;
+  position: absolute;
+  left: 204.953px;
+  top: 429.77px;
+  z-index: 117;
 }
 .design_shape .visual_line {
   background-image: url("../assets/img/visual_line.png");
@@ -246,7 +259,7 @@
   background-image: url("../assets/img/line.png");
   position: absolute;
   left: 902px;
-  top: -39px;
+  top: 0px;
   width: 12px;
   height: 1229px;
   z-index: 11;
@@ -260,32 +273,23 @@
   z-index: 10;
 }
 .design_shape .main_wrap .right {
-  background-image: url("../assets/img/Layer 75 copy 2.png");
+  background-image: url("../assets/img/right.png");
   opacity: 0.2;
   position: absolute;
   left: 773px;
-  top: -39px;
+  top: 0px;
   width: 176px;
-  height: 1229px;
+  height: 987px;
   z-index: 9;
 }
 .design_shape .main_wrap .left {
-  background-image: url("../assets/img/Layer 75 copy 2.png");
+  background-image: url("../assets/img/left.png");
   position: absolute;
   left: 759px;
-  top: -39px;
+  top: 0px;
   width: 12px;
-  height: 1229px;
+  height: 987px;
   z-index: 8;
-}
-.design_shape .main_wrap .Layer_100 {
-  background-image: url("../assets/img/Layer 100.png");
-  position: absolute;
-  left: 75px;
-  top: 261px;
-  width: 377px;
-  height: 377px;
-  z-index: 6;
 }
 .design_shape .main_wrap .main {
   background-image: url("../assets/img/main01.png"); 
@@ -293,18 +297,17 @@
   position: absolute;
   left: 60px;
   top: 83px;
-  width: 1308px;
-  height: 872px;
+  width: 713px;
+  height: 865px;
   z-index: 5;
 }
 .design_shape .main_wrap .line {
   background-image: url("../assets/img/line.png");
-  background-repeat: no-repeat;
   position: absolute;
   left: 902px;
-  top: -39px;
+  top: 0px;
   width: 12px;
-  height: 1229px;
+  height: 987px;
   z-index: 11;
 }
 

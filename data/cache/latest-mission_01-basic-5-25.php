@@ -19,7 +19,7 @@ $list=array (
     'wr_link2' => '',
     'wr_link1_hit' => '0',
     'wr_link2_hit' => '0',
-    'wr_hit' => '19',
+    'wr_hit' => '20',
     'wr_good' => '0',
     'wr_nogood' => '0',
     'mb_id' => 'admin',
@@ -79,7 +79,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/jubinna/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://localhost/jubinna/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
   1 => 
   array (
@@ -158,7 +158,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/jubinna/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://localhost/jubinna/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
   2 => 
   array (
@@ -237,6 +237,6 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/jubinna/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://localhost/jubinna/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
 )?>
