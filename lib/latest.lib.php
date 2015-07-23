@@ -70,4 +70,70 @@ function latest($skin_dir='', $bo_table, $rows=10, $subject_len=40, $cache_time=
 
     return $content;
 }
+
+// 최신글 겔러리
+// $cache_time 캐시 갱신시간
+function latest_gallery($skin_dir='', $bo_table, $offset=0, $rows=10, $subject_len=40, $cache_time=1, $options='')
+{
+    global $g5;
+    //static $css = array();
+
+    if (!$skin_dir) $skin_dir = 'basic';
+
+    $latest_skin_path = THEMES_PATH.'/'.G5_SKIN_DIR.'/latest/'.$skin_dir;
+    $latest_skin_url  = THEMES_URL.'/'.G5_SKIN_DIR.'/latest/'.$skin_dir;
+
+    $cache_fwrite = false;
+    if(G5_USE_CACHE) {
+        $cache_file = G5_DATA_PATH."/cache/latest-gallery-{$bo_table}-{$skin_dir}-{$rows}-{$subject_len}.php";
+
+        if(!file_exists($cache_file)) {
+            $cache_fwrite = true;
+        } else {
+            if($cache_time > 0) {
+                $filetime = filemtime($cache_file);
+                if($filetime && $filetime < (G5_SERVER_TIME - 3600 * $cache_time)) {
+                    @unlink($cache_file);
+                    $cache_fwrite = true;
+                }
+            }
+
+            if(!$cache_fwrite)
+                include($cache_file);
+        }
+    }
+
+    if(!G5_USE_CACHE || $cache_fwrite) {
+        $bo_files = array();
+
+        $sql = " select * from {$g5['board_file_table']} where bo_table = '{$bo_table}' ";
+        $board = sql_fetch($sql);
+        $bo_files = get_file($board['bo_table'], $board['wr_id']);
+
+        if($cache_fwrite) {
+            $handle = fopen($cache_file, 'w');
+            $cache_content = "<?php\nif (!defined('_GNUBOARD_')) exit;\n\$bo_subject='".$bo_files['bf_no']."';\n\$bo_files=".var_export($bo_files, true)."?>";
+            fwrite($handle, $cache_content);
+            fclose($handle);
+        }
+    }
+
+    /*
+    // 같은 스킨은 .css 를 한번만 호출한다.
+    if (!in_array($skin_dir, $css) && is_file($latest_skin_path.'/style.css')) {
+        echo '<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">';
+        $css[] = $skin_dir;
+    }
+    */
+
+    ob_start();
+    include $latest_skin_path.'/latest_gallery.skin.php';
+    $content = ob_get_contents();
+    ob_end_clean();
+
+    return $content;
+}
+
+
+
 ?>

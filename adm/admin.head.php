@@ -3,7 +3,7 @@ if (!defined('_GNUBOARD_')) exit;
 
 $begin_time = get_microtime();
 
-include_once(G5_PATH.'/head.sub.php');
+include_once($themes_path.'/head.sub.php');
 
 function print_menu1($key, $no)
 {

@@ -174,7 +174,7 @@ if (isset($wr_id) && $wr_id) {
     $g5['title'] = $board['bo_subject']." ".$page." 페이지";
 }
 
-include_once(G5_PATH.'/head.sub.php');
+include_once($themes_path.'/head.sub.php');
 
 $width = $board['bo_table_width'];
 if ($width <= 100)
@@ -238,5 +238,5 @@ include_once('./board_tail.php');
 
 echo "\n<!-- 사용스킨 : ".(G5_IS_MOBILE ? $board['bo_mobile_skin'] : $board['bo_skin'])." -->\n";
 
-include_once(G5_PATH.'/tail.sub.php');
+include_once($themes_path.'/tail.sub.php');
 ?>
