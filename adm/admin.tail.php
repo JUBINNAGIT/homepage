@@ -126,5 +126,5 @@ function menu_rearrange(el)
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once($themes_path.'/tail.sub.php');
 ?>

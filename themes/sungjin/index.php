@@ -14,33 +14,10 @@ if (G5_IS_MOBILE) {
 }
 
 include_once($themes_path.'/head.php');
-add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/main.css">', 1);
 ?>
 
     <div id="logo">
         <img src="assets/img/logo.png">
-    </div>
-    <div class="menu_bar">
-        <div class="church_wrap">
-            <div class="church">교회소개</div>
-        </div>
-        <div class="service_wrap">
-            <div class="service over">예배자료</div>
-            <div class="service_video inactive">문서말씀</div>
-            <div class="service_docu">영상말씀</div>
-        </div>
-        <div class="mission_wrap">
-            <div class="mission">인터넷선교</div>
-        </div>
-            <div class="bible_wrap">
-            <div class="bible">성경공부</div>
-        </div>
-        <div class="refer_wrap">
-            <div class="refer_data">참고자료</div>
-        </div>
-        <div class="event_wrap">
-            <div class="event_data">행사자료</div>
-        </div>
     </div>
     
     <div class="design_shape">
@@ -50,6 +27,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/main.css">', 1);
         <div class="btn"></div>
         <div class="visual_line"></div>
         <div class="shadow"></div>
+
         <div class="main_wrap">
             <div class="left"></div>
             <div class="right"></div>
@@ -62,6 +40,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/main.css">', 1);
             <div class="top_btn"></div>
 
             <div class="imgWrap">
+        <!-- 겔러리 시작  -->
 <?php
         $page_no = 0;
         $sql = "select bo_table
@@ -84,6 +63,8 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/main.css">', 1);
             <div class="bottom_btn"></div>
         </div>
     </div>
+        <!-- 겔러리 끝  -->
+
     <div class="latest_board">
         <!-- 최신글 시작  -->
 <?php

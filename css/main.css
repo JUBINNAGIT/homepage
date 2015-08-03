@@ -4,188 +4,22 @@
   top: 73px;
 }
 
-
-/* START menu_bar */
-.menu_bar {
+#menubar {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 780px;
-  height: 350px;
-  z-index: 104;
+  left: 50px;
+  top: 110px;
+  -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
+  -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
+  -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
+  z-index:107;
 }
-  .menu_bar .over {
-    color: rgb(191, 30, 46);
-  }
-  .menu_bar .inactive {
-    color: rgb(137, 137, 137);
-  }
-  .event_wrap {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 103;
-  }
-    .event_data {
-      font-size: 21px;
-      font-family: "HaanYGodic23";
-      color: rgb(77, 77, 77);
-      line-height: 4.673;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 642.469px;
-      top: 18.944px;
-      width: 110px;
-      height:50px;
-      z-index: 97;
-    }
-  .refer_wrap {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 95;
-  }
-    .refer_data {
-      font-size: 21px;
-      font-family: "HaanYGodic23";
-      color: rgb(77, 77, 77);
-      line-height: 4.673;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 541.024px;
-      top: 61.873px;
-      width: 110px;
-      height:50px;
-      z-index: 89;
-    }
-  .bible_wrap {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 87;
-  }
-    .bible {
-      font-size: 21px;
-      font-family: "HaanYGodic23";
-      color: rgb(77, 77, 77);
-      line-height: 4.673;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 438.742px;
-      top: 104.389px;
-      width: 110px;
-      height:50px;
-      z-index: 81;
-    }
-  .mission_wrap {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 79;
-  }
-    .mission {
-      font-size: 21px;
-      font-family: "HaanYGodic23";
-      color: rgb(77, 77, 77);
-      line-height: 4.673;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 324.248px;
-      top: 147.951px;
-      width: 110px;
-      height:50px;
-      z-index: 77;
-    }
-  .service_wrap {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 75;
-  }
-    .service {
-      font-size: 21px;
-      font-family: "HaanYGodic23";
-      color: rgb(0, 0, 0);
-      line-height: 4.673;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 233.891px;
-      top: 187.576px;
-      width: 110px;
-      height:50px;
-      z-index: 70;
-    }
-    .service_video {
-      font-size: 16.667px;
-      font-family: "HaanYGodic23";
-      color: rgb(0, 0, 0);
-      line-height: 5.841;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 290.055px;
-      top: 194.433px;
-      width: 110px;
-      height:50px;
-      z-index: 73;
-    }
-    .service_docu {
-      font-size: 16.667px;
-      font-family: "HaanYGodic23";
-      color: rgb(0, 0, 0);
-      line-height: 5.841;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 212.523px;
-      top: 225.519px;
-      width: 110px;
-      height:50px;
-      z-index: 72;
-    }
-  .church_wrap {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 67;
-  }
-    .church {
-      font-size: 21px;
-      font-family: "HaanYGodic23";
-      color: rgb(77, 77, 77);
-      line-height: 4.673;
-      text-align: left;
-      -moz-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -webkit-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      -ms-transform: matrix( 0.92284906776214,-0.3851617817626,0.3851617817626,0.92284906776214,0,0);
-      position: absolute;
-      left: 132.899px;
-      top: 230.522px;
-      width: 110px;
-      height:50px;
-      z-index: 65;
-    }
-/* END manu_bar */
 
+#board_body {
+  position: relative;
+  left:50px;
+  top:400px;
+  width: 1100px;
+}
 
 /* START design_shape */
 .design_shape {
@@ -313,6 +147,30 @@
 
 /* END design_shape */
 
+#util_bar {
+  position: absolute;
+  left: 940.109px;
+  top: 72.362px;
+  width: 360px;
+  height: 15px;
+  z-index: 114;
+}
+#util_bar .link {
+  float:left;
+  font-size: 14.583px;
+  font-family: "HaanYGodic23";
+  color: rgb(125, 125, 125);
+  width:80px;
+  text-align:center;
+}
+.divider {
+  background-color: rgb(137, 137, 137);
+  float:left;
+  width: 1px;
+  height: 15px;
+  z-index: 113;
+}
+
 
 .gallery {
   position: absolute;
@@ -372,6 +230,175 @@
   width: 340px;
   height: 810px;
   z-index: 40;
+}
+
+
+#line_r {
+  background-image: url("../assets/img/page_line.png");
+  position: absolute;
+  left: 859px;
+  top: 0px;
+  width: 276px;
+  height: 286px;
+  z-index: 22;
+}
+#line_b {
+  background-image: url("../assets/img/page_line2.png");
+  position: absolute;
+  left: 0px;
+  top: 162px;
+  width: 1280px;
+  height: 352px;
+  z-index: 21;
+}
+#line_t {
+  background-image: url("../assets/img/page_line0.png");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1099px;
+  height: 460px;
+  z-index: 20;
+}
+#top_img {
+  background-image: url("../assets/img/page_top_img.png");
+  position: absolute;
+  left: 34px;
+  top: 30px;
+  width: 1001px;
+  height: 360px;
+  z-index: 18;
+}
+
+.bg {
+  background-image: url("bg.png");
+  position: absolute;
+  left: -311px;
+  top: -367px;
+  width: 1591px;
+  height: 2340px;
+  z-index: 17;
+}
+
+
+.footer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1280px;
+  height: 1040px;
+  z-index: 15;
+}
+.찾아오시는길 {
+  font-size: 12.5px;
+  font-family: "HaanYGodic23";
+  color: rgb(85, 85, 85);
+  line-height: 4.667;
+  text-align: left;
+  position: absolute;
+  left: 554.531px;
+  top: 991.026px;
+  z-index: 13;
+}
+.제휴문의 {
+  font-size: 12.5px;
+  font-family: "HaanYGodic23";
+  color: rgb(85, 85, 85);
+  line-height: 4.667;
+  text-align: left;
+  position: absolute;
+  left: 488.281px;
+  top: 991.011px;
+  z-index: 12;
+}
+.개인정보정책 {
+  font-size: 12.5px;
+  font-family: "HaanYGodic23";
+  color: rgb(85, 85, 85);
+  line-height: 4.667;
+  text-align: left;
+  position: absolute;
+  left: 400.203px;
+  top: 991.011px;
+  z-index: 11;
+}
+.이용약관 {
+  font-size: 12.5px;
+  font-family: "HaanYGodic23";
+  color: rgb(85, 85, 85);
+  line-height: 4.667;
+  text-align: left;
+  position: absolute;
+  left: 334.625px;
+  top: 991.026px;
+  z-index: 10;
+}
+.인천광역시_서구_천국동_777번지_Copyright_©_소유하신_도메인__All_ri {
+  font-size: 10.417px;
+  font-family: "HaanYGodic23";
+  color: rgb(137, 137, 137);
+  line-height: 1.2;
+  text-align: left;
+  position: absolute;
+  left: 268.625px;
+  top: 973.036px;
+  z-index: 9;
+}
+.교회소개 {
+  font-size: 12.5px;
+  font-family: "HaanYGodic23";
+  color: rgb(85, 85, 85);
+  line-height: 4.667;
+  text-align: left;
+  position: absolute;
+  left: 268.297px;
+  top: 991.011px;
+  z-index: 8;
+}
+.Shape_3_copy_3 {
+  background-color: rgb(137, 137, 137);
+  position: absolute;
+  left: 545px;
+  top: 957px;
+  width: 1px;
+  height: 10px;
+  z-index: 7;
+}
+.Shape_3_copy_2 {
+  background-color: rgb(137, 137, 137);
+  position: absolute;
+  left: 477px;
+  top: 957px;
+  width: 1px;
+  height: 10px;
+  z-index: 6;
+}
+.Shape_3_copy {
+  background-color: rgb(137, 137, 137);
+  position: absolute;
+  left: 393px;
+  top: 957px;
+  width: 1px;
+  height: 10px;
+  z-index: 5;
+}
+.Shape_3 {
+  background-color: rgb(137, 137, 137);
+  position: absolute;
+  left: 325px;
+  top: 957px;
+  width: 1px;
+  height: 10px;
+  z-index: 4;
+}
+.Shape_2 {
+  background-color: rgb(137, 137, 137);
+  position: absolute;
+  left: 246px;
+  top: 956px;
+  width: 1px;
+  height: 42px;
+  z-index: 3;
 }
 
 /* 새글 스킨 (latest) */

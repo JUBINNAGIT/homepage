@@ -62,21 +62,24 @@ a:hover, a:focus, a:active {color:#000;text-decoration:underline}
 /* 메인메뉴 */
 #gnb {position:relative;margin:-1px 0 0;border-top:1px dotted #dde4e9;border-bottom:1px solid #dde4e9;background:#ecf0f7}
 #gnb h2 {position:absolute;font-size:0;line-height:0;overflow:hidden}
-#gnb_1dul {margin:0 auto !important;padding:0;width:970px;zoom:1}
+#gnb_1dul {margin:0 auto !important;padding:0;width:970px;zoom:1;list-style:none}
 #gnb_1dul:after {display:block;visibility:hidden;clear:both;content:""}
 .gnb_1dli {z-index:10;position:relative;float:left}
 .gnb_1da {display:inline-block;padding:0 40px 0 10px;height:35px;background:url('../img/gnb_bg00.gif') center right no-repeat;font-weight:bold;line-height:2.95em;text-decoration:none}
-.gnb_1da:focus, .gnb_1da:hover {background:url('../img/gnb_bg00.gif') #333 center right no-repeat;text-decoration:none}
-.gnb_1dli_air .gnb_1da {background-color:#333;color:#fff}
-.gnb_1dli_on .gnb_1da {background-color:#333;color:#fff}
-.gnb_2dul {display:none;position:absolute;top:35px;width:180px}
-.gnb_2da {display:block;padding:13px 10px;text-align:left;text-decoration:none}
-.gnb_1dli_air .gnb_2da {background-color:#333;color:#fff}
-.gnb_1dli_on .gnb_2da {background-color:#333;color:#fff}
-.gnb_2da:focus, .gnb_2da:hover {background:#666;text-decoration:none}
-.gnb_1dli_over .gnb_2dul {display:block;left:0;background:#fff}
-.gnb_1dli_over2 .gnb_2dul {display:block;right:0;background:#fff}
-
+.gnb_1da:focus, .gnb_1da:hover {text-decoration:none}
+.gnb_1dli_air .gnb_1da {color:rgb(191, 30, 46)}
+.gnb_1dli_on .gnb_1da {color:rgb(191, 30, 46)}
+.gnb_2dul {display:none;position:absolute;top:35px;left:-80px;width:300px;padding: 0px;list-style:none}
+.gnb_2dli {z-index:10;position:relative;float:left}
+.gnb_2da {display:block;padding:7px 10px;text-decoration:none}
+.gnb_1dli_air .gnb_2da {color:rgb(137, 137, 137)}
+.gnb_1dli_on .gnb_2da {color:rgb(137, 137, 137)}
+.gnb_2da:focus, .gnb_2da:hover {color:#000;text-decoration:none}
+.gnb_1dli_over .gnb_2dul {display:block}
+.gnb_1dli_over2 .gnb_2dul {display:block}
+#menubar a {      font-size: 18px;
+      font-family: "HaanYGodic23";vertical-align:middle
+}
 #gnb_empty {padding:10px 0;width:100%;text-align:center;line-height:2em}
 #gnb_empty a {text-decoration:underline}
 
@@ -86,12 +89,12 @@ a:hover, a:focus, a:active {color:#000;text-decoration:underline}
 
 #aside {float:right;margin:0 0 0 -1px;width:210px;border-left:1px solid #dde4e9;background:#fff}
 
-#container {z-index:4;position:relative;float:left;padding:15px 16px 15px 15px;width:728px;min-height:500px;height:auto !important;height:500px;border-right:1px solid #dde4e9;background:#fff;font-size:1em;zoom:1}
+#container {z-index:4;position:relative;float:left;padding:15px 16px 15px 15px;width:1280px;min-height:500px;height:auto !important;height:500px;border-right:1px solid #dde4e9;background:#fff;font-size:1em;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {margin-bottom:20px;font-size:1.2em;font-weight:bold}
 
 /* 하단 레이아웃 */
-#ft {min-width:970px;border-top:1px solid #dde4e9;background:#f2f5f9}
+#ft {position:relative;min-width:970px;border-top:1px solid #dde4e9;background:#f2f5f9}
 #ft h1 {position:absolute;font-size:0;line-height:0;overflow:hidden}
 #ft p {margin:0;padding:10px 0;line-height:1.8em}
 
