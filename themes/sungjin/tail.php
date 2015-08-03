@@ -21,9 +21,7 @@ if (G5_IS_MOBILE) {
 
 <!-- 하단 시작 { -->
 <div id="ft">
-    <?php echo popular('basic'); // 인기검색어  ?>
-    <?php echo visit('basic'); // 접속자집계 ?>
-    <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft.png" alt="<?php echo G5_VERSION ?>"></div>
+    <div id="ft_catch"><img src="<?php echo $themes_url; ?>/img/ft.png" alt="<?php echo G5_VERSION ?>"></div>
     <div id="ft_company">
     </div>
     <div id="ft_copy">
@@ -37,32 +35,6 @@ if (G5_IS_MOBILE) {
     </div>
 </div>
 
-<?php
-if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) {
-    $seq = 0;
-    $p = parse_url(G5_URL);
-    $href = $p['scheme'].'://'.$p['host'].$_SERVER['PHP_SELF'];
-    if($_SERVER['QUERY_STRING']) {
-        $sep = '?';
-        foreach($_GET as $key=>$val) {
-            if($key == 'device')
-                continue;
-
-            $href .= $sep.$key.'='.strip_tags($val);
-            $sep = '&amp;';
-            $seq++;
-        }
-    }
-    if($seq)
-        $href .= '&amp;device=mobile';
-    else
-        $href .= '?device=mobile';
-}
-
-if ($config['cf_analytics']) {
-    echo $config['cf_analytics'];
-}
-?>
 
 <!-- } 하단 끝 -->
 
