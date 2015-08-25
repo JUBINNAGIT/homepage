@@ -208,10 +208,13 @@
   z-index: 59;
 }
 .gallery .img {
-  background-image: url("../assets/img/realize_bible_index_09.gif");
   width: 112px;
   height: 74px;
   margin: 10px 0px 0px 0px;
+}
+.gallery .img img {
+  width: 112px;
+  height: 74px;
 }
 .gallery .title {
   background-image: url("../assets/img/Gallery.png");

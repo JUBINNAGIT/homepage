@@ -6,18 +6,17 @@ add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 
 ?>
 
 <?php
-for ($i=0; $i<count($bo_files); $i++) {
+
+for ($i=0; $i<$bo_files['count']; $i++) {
 
     //echo $list[$i]['icon_reply']." ";
     echo "<a href=\"".$bo_files[$i]['href']."\">";
-    if ($bo_files[$i]['is_notice'])
-        echo "<strong>".$bo_files[$i]['subject']."</strong>";
-    else
-        echo $bo_files[$i]['subject'];
-
-    if ($list[$i]['comment_cnt'])
-        echo $bo_files[$i]['comment_cnt'];
-
+   
+    if($bo_files[$i]['file']) {
+        $path = G5_DATA_URL.'/file/'.$bo_table.'/'.$bo_files[$i]['file'];
+        $img_content = '<img src="'.$path.'">';
+    }
+    echo $img_content;
     echo "</a>";
 
     // if ($list[$i]['link']['count']) { echo "[{$list[$i]['link']['count']}]"; }
