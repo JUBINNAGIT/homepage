@@ -7,27 +7,15 @@ add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 
 
 <?php
 
-for ($i=0; $i<$bo_files['count']; $i++) {
+    for ($i=0; $i<count($lists); $i++) {
 
-    //echo $list[$i]['icon_reply']." ";
-    echo "<a href=\"".$bo_files[$i]['href']."\">";
-   
-    if($bo_files[$i]['file']) {
-        $path = G5_DATA_URL.'/file/'.$bo_table.'/'.$bo_files[$i]['file'];
-        $img_content = '<img src="'.$path.'">';
+        echo "<a href=\"".G5_BBS_URL."/board.php?bo_table=".$lists[$i]['bo_table']."&wr_id=".$lists[$i]['wr_id']."\">";
+
+        if($lists[$i]['bf_file']) {
+            $path = G5_DATA_URL.'/file/'.$lists[$i]['bo_table'].'/'.$lists[$i]['bf_file'];
+            $img_content = '<img src="'.$path.'">';
+        }
+        echo $img_content;
+        echo "</a>";
     }
-    echo $img_content;
-    echo "</a>";
-
-    // if ($list[$i]['link']['count']) { echo "[{$list[$i]['link']['count']}]"; }
-    // if ($list[$i]['file']['count']) { echo "<{$list[$i]['file']['count']}>"; }
-
-    if (isset($bo_files[$i]['icon_new'])) echo " " . $bo_files[$i]['icon_new'];
-    if (isset($bo_files[$i]['icon_hot'])) echo " " . $bo_files[$i]['icon_hot'];
-}
-if (count($bo_files) == 0) {
-?>
-    <b>게시물이 없습니다</b>
-<?php
-}
 ?>

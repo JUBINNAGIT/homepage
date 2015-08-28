@@ -73,7 +73,7 @@ function latest($skin_dir='', $bo_table, $rows=10, $subject_len=40, $cache_time=
 
 // 최신글 겔러리
 // $cache_time 캐시 갱신시간
-function latest_gallery($skin_dir='', $bo_table, $offset=0, $rows=10, $subject_len=40, $cache_time=1, $options='')
+function latest_gallery($skin_dir='', $offset=0, $rows=10, $subject_len=40, $cache_time=1, $options='')
 {
     global $g5;
     //static $css = array();
@@ -85,7 +85,7 @@ function latest_gallery($skin_dir='', $bo_table, $offset=0, $rows=10, $subject_l
 
     $cache_fwrite = false;
     if(G5_USE_CACHE) {
-        $cache_file = G5_DATA_PATH."/cache/latest-gallery-{$bo_table}-{$skin_dir}-{$rows}-{$subject_len}.php";
+        $cache_file = G5_DATA_PATH."/cache/latest-gallery-{$skin_dir}-{$rows}-{$subject_len}.php";
 
         if(!file_exists($cache_file)) {
             $cache_fwrite = true;
@@ -104,18 +104,27 @@ function latest_gallery($skin_dir='', $bo_table, $offset=0, $rows=10, $subject_l
     }
 
     if(!G5_USE_CACHE || $cache_fwrite) {
-        $bo_files = array();
-
-        $sql = " select * from {$g5['board_file_table']} where bo_table = '{$bo_table}' ";
-        $board = sql_fetch($sql);
-        $bo_files = get_file($board['bo_table'], $board['wr_id']);
+        $lists = array();
+        $sql = "select a.bo_table,bo_subject,wr_id,bf_file from `{$g5['board_table']}` a left join `{$g5['board_file_table']}` b on (a.bo_table=b.bo_table)
+                    where a.bo_device <> 'mobile' and a.bo_skin = 'gallery'";
+        $result = sql_query($sql);
+        for ($i=0; $row=sql_fetch_array($result); $i++) {
+            $list = array();
+            $list['bo_table'] = $row['bo_table'];
+            $list['bo_subject'] = $row['bo_subject'];
+            $list['wr_id'] = $row['wr_id'];
+            $list['bf_file'] = $row['bf_file'];
+            $lists[$i] = $list;
+        }
 
         if($cache_fwrite) {
             $handle = fopen($cache_file, 'w');
-            $cache_content = "<?php\nif (!defined('_GNUBOARD_')) exit;\n\$bo_subject='".$bo_files['bf_no']."';\n\$bo_files=".var_export($bo_files, true)."?>";
+            $cache_content = "<?php\nif (!defined('_GNUBOARD_')) exit;\n\$lists=".var_export($lists, true)."?>";
             fwrite($handle, $cache_content);
             fclose($handle);
         }
+
+
     }
 
     /*

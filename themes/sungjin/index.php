@@ -43,23 +43,12 @@ include_once($themes_path.'/head.php');
         <!-- 겔러리 시작  -->
 <?php
         $page_no = 0;
-        $sql = "select bo_table
-                    from `{$g5['board_table']}` a left join `{$g5['group_table']}` b on (a.gr_id=b.gr_id)
-                    where a.bo_device <> 'mobile' and a.bo_skin = 'gallery'";
-        if(!$is_admin)
-            $sql .= " and a.bo_use_cert = '' ";
-        $sql .= " order by b.gr_order, a.bo_order ";
-        $result = sql_query($sql);
-        for ($i=0; $row=sql_fetch_array($result); $i++) {
 ?>
                 <div class="img" style="float:left;">
 <?php
-                echo latest_gallery($skin, $row['bo_table'], $page_no, 5, 25);
+                echo latest_gallery($skin, $page_no, 8, 25);
 ?>
                 </div>
-<?php
-        }
-?>
             <div class="bottom_btn"></div>
         </div>
     </div>
