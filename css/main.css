@@ -280,121 +280,107 @@
 }
 
 
-.footer {
+#footer {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 1280px;
-  height: 1040px;
+  left: 186px;
+  top: 930px;
   z-index: 15;
 }
-.찾아오시는길 {
+#footer div {
+  position: relative;
+}
+#footer .float {
+  float:left;
+}
+#footer_bottom {
+  top: 15px;
+}
+#footer_find {
   font-size: 12.5px;
   font-family: "HaanYGodic23";
   color: rgb(85, 85, 85);
-  line-height: 4.667;
+  line-height: 1.2;
   text-align: left;
-  position: absolute;
-  left: 554.531px;
-  top: 991.026px;
+  left: 94.531px;
   z-index: 13;
 }
-.제휴문의 {
+#footer_question {
   font-size: 12.5px;
   font-family: "HaanYGodic23";
   color: rgb(85, 85, 85);
-  line-height: 4.667;
+  line-height: 1.2;
   text-align: left;
-  position: absolute;
-  left: 488.281px;
-  top: 991.011px;
+  left: 74.281px;
   z-index: 12;
 }
-.개인정보정책 {
+#footer_lisence {
   font-size: 12.5px;
   font-family: "HaanYGodic23";
   color: rgb(85, 85, 85);
-  line-height: 4.667;
+  line-height: 1.2;
   text-align: left;
-  position: absolute;
-  left: 400.203px;
-  top: 991.011px;
+  left: 58.203px;
   z-index: 11;
 }
-.이용약관 {
+#footer_agree {
   font-size: 12.5px;
   font-family: "HaanYGodic23";
   color: rgb(85, 85, 85);
-  line-height: 4.667;
+  line-height: 1.2;
   text-align: left;
-  position: absolute;
-  left: 334.625px;
-  top: 991.026px;
+  left: 39.625px;
   z-index: 10;
 }
-.인천광역시_서구_천국동_777번지_Copyright_©_소유하신_도메인__All_ri {
+#footer_address {
   font-size: 10.417px;
   font-family: "HaanYGodic23";
   color: rgb(137, 137, 137);
   line-height: 1.2;
   text-align: left;
-  position: absolute;
-  left: 268.625px;
-  top: 973.036px;
+  left: 19.297px;
   z-index: 9;
 }
-.교회소개 {
+#footer_intro {
   font-size: 12.5px;
   font-family: "HaanYGodic23";
   color: rgb(85, 85, 85);
-  line-height: 4.667;
+  line-height: 1.2;
   text-align: left;
-  position: absolute;
-  left: 268.297px;
-  top: 991.011px;
+  left: 19.297px;
   z-index: 8;
 }
-.Shape_3_copy_3 {
+#footer_shape4 {
   background-color: rgb(137, 137, 137);
-  position: absolute;
-  left: 545px;
-  top: 957px;
+  left: 86px;
   width: 1px;
   height: 10px;
   z-index: 7;
 }
-.Shape_3_copy_2 {
+#footer_shape3 {
   background-color: rgb(137, 137, 137);
-  position: absolute;
-  left: 477px;
-  top: 957px;
+  left: 67px;
   width: 1px;
   height: 10px;
   z-index: 6;
 }
-.Shape_3_copy {
+#footer_shape2 {
   background-color: rgb(137, 137, 137);
-  position: absolute;
-  left: 393px;
-  top: 957px;
+  left: 49px;
   width: 1px;
   height: 10px;
   z-index: 5;
 }
-.Shape_3 {
+#footer_shape1 {
   background-color: rgb(137, 137, 137);
-  position: absolute;
-  left: 325px;
-  top: 957px;
+  left: 33px;
   width: 1px;
   height: 10px;
   z-index: 4;
 }
-.Shape_2 {
+#footer_shape {
   background-color: rgb(137, 137, 137);
-  position: absolute;
-  left: 246px;
-  top: 956px;
+  float:left;
+  left: 11px;
   width: 1px;
   height: 42px;
   z-index: 3;

@@ -20,22 +20,21 @@ if (G5_IS_MOBILE) {
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="ft">
-    <div id="ft_catch"><img src="<?php echo $themes_url; ?>/img/ft.png" alt="<?php echo G5_VERSION ?>"></div>
-    <div id="ft_company">
-    </div>
-    <div id="ft_copy">
-        <div>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">회사소개</a>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=privacy">개인정보취급방침</a>
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=provision">서비스이용약관</a>
-            Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.<br>
-            <a href="#hd" id="ft_totop">상단으로</a>
+<div id="footer">
+    <div id="footer_logo" class="float"><img src="assets/img/footer_logo.png"></div><div id="footer_shape" class="float"></div>
+    <div id="footer_right" class="float">
+        <div id="footer_top">
+            <div id="footer_intro" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">소계</a></div><div id="footer_shape1" class="float"></div>
+            <div id="footer_agree" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=privacy">개인정보취급</a></div><div id="footer_shape2" class="float"></div>
+            <div id="footer_lisence" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=provision">이용약관</a></div><div id="footer_shape3" class="float"></div>
+            <div id="footer_question" class="float">문의</div><div id="footer_shape4" class="float"></div>
+            <div id="footer_find" class="float">찾아오시는길</div>
+        </div>
+        <div id="footer_bottom">
+            <div id="footer_address">부천시 원미구 중동. 신중동역 부근</div>
         </div>
     </div>
 </div>
-
-
 <!-- } 하단 끝 -->
 
 <script>
