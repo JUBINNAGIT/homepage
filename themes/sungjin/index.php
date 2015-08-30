@@ -84,6 +84,6 @@ include_once($themes_path.'/head.php');
     </div>
     
 <?php
-include_once($themes_path.'/_tail.php');
+include_once($themes_path.'/tail.php');
 ?>
 

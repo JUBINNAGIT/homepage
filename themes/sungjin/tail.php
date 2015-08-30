@@ -24,7 +24,7 @@ if (G5_IS_MOBILE) {
     <div id="footer_logo" class="float"><img src="assets/img/footer_logo.png"></div><div id="footer_shape" class="float"></div>
     <div id="footer_right" class="float">
         <div id="footer_top">
-            <div id="footer_intro" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">소계</a></div><div id="footer_shape1" class="float"></div>
+            <div id="footer_intro" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=intro">소계</a></div><div id="footer_shape1" class="float"></div>
             <div id="footer_agree" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=privacy">개인정보취급</a></div><div id="footer_shape2" class="float"></div>
             <div id="footer_lisence" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=provision">이용약관</a></div><div id="footer_shape3" class="float"></div>
             <div id="footer_question" class="float">문의</div><div id="footer_shape4" class="float"></div>
