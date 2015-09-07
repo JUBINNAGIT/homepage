@@ -231,6 +231,11 @@
   z-index: 40;
 }
 
+#notics_board {
+  position: absolute;
+  left: 120px;
+  top: 740px;
+}
 
 #line_r {
   background-image: url("../assets/img/page_line.png");

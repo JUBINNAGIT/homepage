@@ -82,7 +82,11 @@ include_once($themes_path.'/head.php');
 ?>
         <!--  최신글 끝 -->
     </div>
-    
+    <div id="notics_board">
+<?php
+        echo latest($skin, 'notics', 5, 25);
+?>
+    </div>
 <?php
 include_once($themes_path.'/tail.php');
 ?>
