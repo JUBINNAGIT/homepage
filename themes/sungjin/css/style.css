@@ -43,3 +43,74 @@
   height: 2340px;
   z-index: 17;
 }
+
+#side_title {
+  font-size: 41.667px;
+  font-family: "HaanYGodic23";
+  color: rgb(255, 255, 255);
+  line-height: 2.336;
+  text-align: left;
+  position: absolute;
+  left: 194px;
+  top: 438.01px;
+  z-index: 33;
+}
+
+#side_sub_title {
+  font-size: 21px;
+  font-family: "HaanYGodic23";
+  color: rgb(70, 70, 70);
+  line-height: 2.4;
+  text-align: left;
+  position: absolute;
+  left: 224.703px;
+  top: 495.198px;
+  z-index: 31;
+}
+#side_top_line {
+  background-image: url("../img/side_top_line.png");
+  position: absolute;
+  left: 19px;
+  top: 176px;
+  width: 507px;
+  height: 212px;
+  z-index: 30;
+}
+#side_left_line {
+  background-image: url("../img/side_left_line.png");
+  position: absolute;
+  left: 141px;
+  top: 327px;
+  width: 177px;
+  height: 375px;
+  z-index: 29;
+}
+#side_middle_line {
+  background-image: url("../img/side_middle_line.png");
+  position: absolute;
+  left: 112px;
+  top: 416px;
+  width: 317px;
+  height: 185px;
+  z-index: 28;
+}
+#side_right_line {
+  background-image: url("../img/side_right_line.png");
+  position: absolute;
+  left: 379px;
+  top: 278px;
+  width: 177px;
+  height: 513px;
+  z-index: 27;
+}
+#side_bg {
+  background-image: url("../img/side_bg.png");
+  position: absolute;
+  left: 152px;
+  top: 321px;
+  width: 238px;
+  height: 435px;
+  z-index: 26;
+}
+
+

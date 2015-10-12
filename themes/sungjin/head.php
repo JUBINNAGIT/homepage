@@ -20,7 +20,7 @@ if (G5_IS_MOBILE) {
     return;
 }
 add_stylesheet('<link rel="stylesheet" href="'.G5_CSS_URL.'/main.css">', 1);
-add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">', 2);
+add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">', 1);
 ?>
 
 <!-- 상단 시작 { -->
