@@ -1,0 +1,45 @@
+#board_line_01 {
+  background-image: url("../img/board_line_01.png");
+  position: absolute;
+  left: 859px;
+  top: 0px;
+  width: 276px;
+  height: 286px;
+  z-index: 22;
+}
+#board_line_02 {
+  background-image: url("../img/board_line_02.png");
+  position: absolute;
+  left: 0px;
+  top: 162px;
+  width: 1280px;
+  height: 352px;
+  z-index: 21;
+}
+#board_line_03 {
+  background-image: url("../img/board_line_03.png");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1099px;
+  height: 460px;
+  z-index: 20;
+}
+#board_img_02 {
+  background-image: url("../img/board_img_02.png");
+  position: absolute;
+  left: 34px;
+  top: 30px;
+  width: 1001px;
+  height: 360px;
+  z-index: 18;
+}
+#board_bg {
+  background-image: url("../img/board_bg.png");
+  position: absolute;
+  left: -311px;
+  top: -367px;
+  width: 1591px;
+  height: 2340px;
+  z-index: 17;
+}

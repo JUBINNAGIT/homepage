@@ -512,9 +512,6 @@ if ($is_admin != 'super') {
     }
 }
 
-define('G5_SKIN_URL',       G5_URL.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR);
-define('G5_SKIN_PATH',      G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR);
-
 //==============================================================================
 // 스킨경로
 //------------------------------------------------------------------------------
@@ -555,6 +552,10 @@ if (G5_IS_MOBILE) {
 define('THEMES_PATH', $themes_path);
 define('THEMES_URL', $themes_url);
 
+define('G5_SKIN_URL',       THEMES_URL.'/'.G5_SKIN_DIR);
+define('G5_SKIN_PATH',      THEMES_PATH.'/'.G5_SKIN_DIR);
+define('G5_THEMES_CSS_URL', THEMES_URL.'/'.G5_CSS_DIR);
+define('G5_THEMES_CSS_PATH',THEMES_PATH.'/'.G5_CSS_DIR);
 
 // 방문자수의 접속을 남김
 include_once(G5_BBS_PATH.'/visit_insert.inc.php');
