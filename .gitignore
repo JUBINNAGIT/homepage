@@ -1,5 +1,5 @@
 # http session
-data/session/
+
 data/cache/
 data/log/
 data/tmp/

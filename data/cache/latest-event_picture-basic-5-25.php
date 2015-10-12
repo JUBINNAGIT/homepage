@@ -19,7 +19,7 @@ $list=array (
     'wr_link2' => '',
     'wr_link1_hit' => '0',
     'wr_link2_hit' => '0',
-    'wr_hit' => '5',
+    'wr_hit' => '6',
     'wr_good' => '0',
     'wr_nogood' => '0',
     'mb_id' => 'admin',
@@ -54,9 +54,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://localhost/jubinna/bbs/board.php?bo_table=event_picture&amp;sca=',
-    'href' => 'http://localhost/jubinna/bbs/board.php?bo_table=event_picture&amp;wr_id=3',
-    'comment_href' => 'http://localhost/jubinna/bbs/board.php?bo_table=event_picture&amp;wr_id=3',
+    'ca_name_href' => 'http://localhost/bbs/board.php?bo_table=event_picture&amp;sca=',
+    'href' => 'http://localhost/bbs/board.php?bo_table=event_picture&amp;wr_id=3',
+    'comment_href' => 'http://localhost/bbs/board.php?bo_table=event_picture&amp;wr_id=3',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://localhost/jubinna/bbs/link.php?bo_table=event_picture&amp;wr_id=3&amp;no=1',
-      2 => 'http://localhost/jubinna/bbs/link.php?bo_table=event_picture&amp;wr_id=3&amp;no=2',
+      1 => 'http://localhost/bbs/link.php?bo_table=event_picture&amp;wr_id=3&amp;no=1',
+      2 => 'http://localhost/bbs/link.php?bo_table=event_picture&amp;wr_id=3&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -79,6 +79,6 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/jubinna/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://localhost/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
 )?>
