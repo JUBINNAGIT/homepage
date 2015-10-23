@@ -78,6 +78,34 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">',
         <div id="util_bar">
             <?php if ($is_member) {  ?>
             <?php if ($is_admin) {  ?>
+            <script>
+            function taginopen(){
+                var u = "<?php $member['mb_id'] ?>";
+
+                var a=window.open('broadcast/jutv','popForm','location=no');
+                a.resizeTo(600,480);
+                a.moveTo(200,100);
+//                a.location.href = "http://localhost:3001/index.html";
+
+                var form = a.document.createElement("form");
+                var roomField = document.createElement("input");
+                var userField = document.createElement("input");
+                
+                form.action = "http://localhost:3001/index.html"; 
+                form.method="post";
+                roomField.setAttribute("type", "hidden");
+                roomField.setAttribute("name", 'room');
+                roomField.setAttribute("value", 'qewer');
+                userField.setAttribute("type", "hidden");
+                userField.setAttribute("name", 'user');
+                userField.setAttribute("value", 'charles');
+                form.appendChild(roomField);
+                form.appendChild(userField);
+                form.submit();
+            }
+            </script>
+            <div class="link" onclick="taginopen()"><b>방송하기</b></a></div>
+            <div class="divider"></div>
             <div class="link"><a href="<?php echo G5_ADMIN_URL ?>"><b>관리자</b></a><br></div>
             <div class="divider"></div>
             <?php }  ?>
@@ -88,9 +116,10 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">',
             <div class="link"><a href="<?php echo G5_BBS_URL ?>/login.php"><b>로그인</b></a></div>
             <div class="divider"></div>
             <div class="link"><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></div>
-            <?php }  ?>
+            <?php } if (!$is_admin) {  ?>
             <div class="divider"></div>
             <div class="link"><a href="<?php echo G5_BBS_URL ?>/qalist.php">1:1문의</a></div>
+            <?php } ?>
         </div>
         <?php echo poll('basic'); // 설문조사  ?>
     </div>
