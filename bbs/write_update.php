@@ -517,7 +517,8 @@ if($_POST['MAX_FILE_SIZE'] < $_FILES['wr_5']['size']){
             } 
         } 
     } 
-} 
+}
+$i = count($upload);
 $upload[$i]['file']     = bs(ip2long($_SERVER['REMOTE_ADDR'])).'_'.substr($shuffle,0,8).'_'.str_replace('%', '', urlencode(str_replace(' ', '_', $_FILES['wr_5']['name'])));;
 $upload[$i]['source']   = $_FILES['wr_5']['name'];
 $upload[$i]['filesize'] = $_FILES['wr_5']['size'];
