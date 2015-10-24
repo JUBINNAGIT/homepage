@@ -132,17 +132,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			</td>
         </tr>
         <tr>
-            <th scope="row"><label for="wr_2">비메오</label></th>
-            <td>
-				<input type="text" name="wr_2" value="<?php echo $write['wr_2'] ?>" id="wr_2" class="frm_input" size="30" maxlength="50">
-				<span style="color:#777;">※ http://player.vimeo.com/video/ 뒷부분</span>
-			</td>
-        </tr>
-        <tr>
-            <th scope="row"><label for="wr_3">소스코드<br/><span style="color:#999;">iframe<br/>object ...</span></label></th>
-            <td><textarea name="wr_3" id="wr_3" style="width:100%; height:80px;"><?php echo $write['wr_3'] ?></textarea></td>
-        </tr>
-        <tr>
             <th scope="row"><label for="wr_4">동영상링크</label></th>
             <td>
 				<input type="text" name="wr_4" value="<?php echo $write['wr_4'] ?>" id="wr_4" class="frm_input" size="90" maxlength="200"> <br/><br/>
@@ -152,7 +141,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <tr>
             <th scope="row"><label for="wr_5">동영상링크 RTMP</label></th>
             <td>
-				<input type="text" name="wr_5" value="<?php echo $write['wr_5'] ?>" id="wr_5" class="frm_input" size="90" maxlength="200"> <br/><br/>
+                <input type="hidden" name="MAX_FILE_SIZE" value="2048000000" />
+                <input name="userfile" type="file" class="frm_file frm_input"/>
 				<span style="color:#777;">※ 동영상 링크 주소입력 (rtmp://domain/ 이후 파일경로 입력), 파일형식:mp4파일</span>
 			</td>
         </tr>
