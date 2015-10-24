@@ -54,9 +54,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;sca=',
-    'href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;wr_id=5',
-    'comment_href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;wr_id=5',
+    'ca_name_href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;sca=',
+    'href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;wr_id=5',
+    'comment_href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;wr_id=5',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -67,8 +67,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://localhost/bbs/link.php?bo_table=mission_01&amp;wr_id=5&amp;no=1',
-      2 => 'http://localhost/bbs/link.php?bo_table=mission_01&amp;wr_id=5&amp;no=2',
+      1 => 'http://192.168.0.103/bbs/link.php?bo_table=mission_01&amp;wr_id=5&amp;no=1',
+      2 => 'http://192.168.0.103/bbs/link.php?bo_table=mission_01&amp;wr_id=5&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -79,7 +79,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://192.168.0.103/mobile/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
   1 => 
   array (
@@ -133,9 +133,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;sca=',
-    'href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;wr_id=4',
-    'comment_href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;wr_id=4',
+    'ca_name_href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;sca=',
+    'href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;wr_id=4',
+    'comment_href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;wr_id=4',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -146,8 +146,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://localhost/bbs/link.php?bo_table=mission_01&amp;wr_id=4&amp;no=1',
-      2 => 'http://localhost/bbs/link.php?bo_table=mission_01&amp;wr_id=4&amp;no=2',
+      1 => 'http://192.168.0.103/bbs/link.php?bo_table=mission_01&amp;wr_id=4&amp;no=1',
+      2 => 'http://192.168.0.103/bbs/link.php?bo_table=mission_01&amp;wr_id=4&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -158,7 +158,7 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://192.168.0.103/mobile/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
   2 => 
   array (
@@ -212,9 +212,9 @@ $list=array (
     'reply' => 0,
     'icon_reply' => '',
     'icon_link' => '',
-    'ca_name_href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;sca=',
-    'href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;wr_id=2',
-    'comment_href' => 'http://localhost/bbs/board.php?bo_table=mission_01&amp;wr_id=2',
+    'ca_name_href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;sca=',
+    'href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;wr_id=2',
+    'comment_href' => 'http://192.168.0.103/bbs/board.php?bo_table=mission_01&amp;wr_id=2',
     'icon_new' => '',
     'icon_hot' => '',
     'icon_secret' => '',
@@ -225,8 +225,8 @@ $list=array (
     ),
     'link_href' => 
     array (
-      1 => 'http://localhost/bbs/link.php?bo_table=mission_01&amp;wr_id=2&amp;no=1',
-      2 => 'http://localhost/bbs/link.php?bo_table=mission_01&amp;wr_id=2&amp;no=2',
+      1 => 'http://192.168.0.103/bbs/link.php?bo_table=mission_01&amp;wr_id=2&amp;no=1',
+      2 => 'http://192.168.0.103/bbs/link.php?bo_table=mission_01&amp;wr_id=2&amp;no=2',
     ),
     'link_hit' => 
     array (
@@ -237,6 +237,6 @@ $list=array (
     array (
       'count' => '1',
     ),
-    'icon_file' => '<img src="http://localhost/themes/sungjin/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
+    'icon_file' => '<img src="http://192.168.0.103/mobile/themes/basic/skin/latest/basic/img/icon_file.gif" alt="첨부파일">',
   ),
 )?>
