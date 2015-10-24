@@ -391,28 +391,6 @@ if (!$group['gr_use_access'] && $board['bo_read_level'] < 2 && !$secret) {
     naver_syndi_ping($bo_table, $wr_id);
 }
 
-// uploads디렉토리에 파일을 업로드합니다. 
-$uploaddir = '/var/www/ams/video/'; 
-$uploadfile = $uploaddir.basename($_FILES['wr_5']['name']); 
-
-if($_POST['MAX_FILE_SIZE'] < $_FILES['wr_5']['size']){ 
-    alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
-} else { 
-    if(($_FILES['wr_5']['error'] > 0) || ($_FILES['wr_5']['size'] <= 0)){ 
-        alert("파일 업로드에 실패하였습니다.: ".$_FILES['wr_5']['error']); 
-    } else { 
-        // HTTP post로 전송된 것인지 체크합니다. 
-        if(!is_uploaded_file($_FILES['wr_5']['tmp_name'])) { 
-            alert("HTTP로 전송된 파일이 아닙니다."); 
-        } else { 
-            // move_uploaded_file은 임시 저장되어 있는 파일을 ./uploads 디렉토리로 이동합니다. 
-            if (!move_uploaded_file($_FILES['wr_5']['tmp_name'], $uploadfile)) { 
-                alert("파일 업로드 실패입니다."); 
-            } 
-        } 
-    } 
-} 
-
 // 디렉토리가 없다면 생성합니다. (퍼미션도 변경하구요.)
 @mkdir(G5_DATA_PATH.'/file/'.$bo_table, G5_DIR_PERMISSION);
 @chmod(G5_DATA_PATH.'/file/'.$bo_table, G5_DIR_PERMISSION);
@@ -518,6 +496,36 @@ for ($i=0; $i<count($_FILES['bf_file']['name']); $i++) {
         chmod($dest_file, G5_FILE_PERMISSION);
     }
 }
+
+// uploads디렉토리에 파일을 업로드합니다. 
+$uploaddir = '/var/www/ams/video/'; 
+$uploadfile = $uploaddir.basename($_FILES['wr_5']['name']); 
+
+if($_POST['MAX_FILE_SIZE'] < $_FILES['wr_5']['size']){ 
+    alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
+} else { 
+    if(($_FILES['wr_5']['error'] > 0) || ($_FILES['wr_5']['size'] <= 0)){ 
+        alert("파일 업로드에 실패하였습니다.: ".$_FILES['wr_5']['error']); 
+    } else { 
+        // HTTP post로 전송된 것인지 체크합니다. 
+        if(!is_uploaded_file($_FILES['wr_5']['tmp_name'])) { 
+            alert("HTTP로 전송된 파일이 아닙니다."); 
+        } else { 
+            // move_uploaded_file은 임시 저장되어 있는 파일을 ./uploads 디렉토리로 이동합니다. 
+            if (!move_uploaded_file($_FILES['wr_5']['tmp_name'], $uploadfile)) { 
+                alert("파일 업로드 실패입니다."); 
+            } 
+        } 
+    } 
+} 
+$upload[$i]['file']     = bs(ip2long($_SERVER['REMOTE_ADDR'])).'_'.substr($shuffle,0,8).'_'.str_replace('%', '', urlencode(str_replace(' ', '_', $_FILES['wr_5']['name'])));;
+$upload[$i]['source']   = $_FILES['wr_5']['name'];
+$upload[$i]['filesize'] = $_FILES['wr_5']['size'];
+$upload[$i]['image']    = array();
+$upload[$i]['image'][0] = '';
+$upload[$i]['image'][1] = '';
+$upload[$i]['image'][2] = '';
+
 
 // 나중에 테이블에 저장하는 이유는 $wr_id 값을 저장해야 하기 때문입니다.
 for ($i=0; $i<count($upload); $i++)
