@@ -395,20 +395,20 @@ if (!$group['gr_use_access'] && $board['bo_read_level'] < 2 && !$secret) {
 $uploaddir = '/var/www/ams/video/'.$bo_table.'/'; 
 // 디렉토리가 없다면 생성합니다. (퍼미션도 변경하구요.)
 @mkdir($uploaddir, G5_VIDEO_DIR_PERMISSION);
-$uploadfile = $uploaddir . basename($_FILES['userfile']['name']); 
+$uploadfile = $uploaddir . basename($_FILES['wr_5']['name']); 
 
-if($_POST['MAX_FILE_SIZE'] < $_FILES['userfile']['size']){ 
+if($_POST['MAX_FILE_SIZE'] < $_FILES['wr_5']['size']){ 
     alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
 } else { 
-    if(($_FILES['userfile']['error'] > 0) || ($_FILES['wr_5']['size'] <= 0)){ 
-        alert("파일 업로드에 실패하였습니다.: ".$_FILES['userfile']['error']); 
+    if(($_FILES['wr_5']['error'] > 0) || ($_FILES['wr_5']['size'] <= 0)){ 
+        alert("파일 업로드에 실패하였습니다.: ".$_FILES['wr_5']['error']); 
     } else { 
         // HTTP post로 전송된 것인지 체크합니다. 
-        if(!is_uploaded_file($_FILES['userfile']['tmp_name'])) { 
+        if(!is_uploaded_file($_FILES['wr_5']['tmp_name'])) { 
             alert("HTTP로 전송된 파일이 아닙니다."); 
         } else { 
             // move_uploaded_file은 임시 저장되어 있는 파일을 ./uploads 디렉토리로 이동합니다. 
-            if (!move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) { 
+            if (!move_uploaded_file($_FILES['wr_5']['tmp_name'], $uploadfile)) { 
                 alert("파일 업로드 실패입니다."); 
             } 
         } 
