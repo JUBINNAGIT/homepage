@@ -45,13 +45,13 @@
 }
 
 #side_title {
-  font-size: 41.667px;
+  font-size: 33.667px;
   font-family: "HaanYGodic23";
   color: rgb(255, 255, 255);
   line-height: 2.336;
   text-align: left;
   position: absolute;
-  left: 194px;
+  left: 175px;
   top: 438.01px;
   z-index: 33;
 }
@@ -63,7 +63,7 @@
   line-height: 2.4;
   text-align: left;
   position: absolute;
-  left: 224.703px;
+  left: 194.703px;
   top: 495.198px;
   z-index: 31;
 }

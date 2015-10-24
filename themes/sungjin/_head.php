@@ -7,15 +7,21 @@ include_once($themes_path.'/head.php');
 
 ?>
 <div id="logo">
-    <img src="../assets/img/logo.png">
+    <a href="<?php echo G5_URL ?>" target="_self"><img src="../assets/img/logo.png"/></a>
 </div>
 <div id="board_line_01"></div>
 <div id="board_line_02"></div>
 <div id="board_line_03"></div>
 <div id="board_img_02"></div>
 
-    <div id="side_title"></div>
-    <div id="side_sub_title"></div>
+    <?php
+    if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) {
+    	$sub_title=$g5['title']; 
+    } else {
+    	$sub_title=$board['bo_subject'];
+    } ?>
+    <div id="side_title"><?php echo $inTitle ?></div>
+    <div id="side_sub_title"><?php echo $sub_title ?></div>
     <div id="side_top_line"></div>
     <div id="side_middle_line"></div>
     <div id="side_left_line"></div>
@@ -23,4 +29,3 @@ include_once($themes_path.'/head.php');
     <div id="side_bg"></div>
 
 <div id="container">
-    <?php if ((!$bo_table || $w == 's' ) && !defined("_INDEX_")) { ?><div id="container_title"><?php echo $g5['title'] ?></div><?php } ?>

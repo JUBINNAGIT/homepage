@@ -15,7 +15,7 @@ if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
     <?php echo visit('basic'); // 방문자수 ?>
     <div id="ft_copy">
         <div id="ft_company">
-            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=company">회사소개</a>
+            <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=intro">회사소개</a>
             <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=privacy">개인정보취급방침</a>
             <a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=provision">서비스이용약관</a>
         </div>
@@ -62,5 +62,5 @@ $(function() {
 </script>
 
 <?php
-include_once(G5_PATH."/tail.sub.php");
+include_once($themes_path."/tail.sub.php");
 ?>

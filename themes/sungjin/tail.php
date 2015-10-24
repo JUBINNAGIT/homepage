@@ -8,20 +8,20 @@ if ($config['cf_include_tail'] && is_file(G5_PATH.'/'.$config['cf_include_tail']
 }
 
 if (G5_IS_MOBILE) {
-    include_once(G5_MOBILE_PATH.'/tail.php');
+    include_once($themes_path.'/tail.php');
     return;
 }
 ?>
     </div>
-</div>
+</div> <!-- #wrapper -->
 
 <!-- } 콘텐츠 끝 -->
 
 <hr>
 
 <!-- 하단 시작 { -->
-<div id="footer">
-    <div id="footer_logo" class="float"><img src="assets/img/footer_logo.png"></div><div id="footer_shape" class="float"></div>
+<div id="footer" class="<?php echo $footerClass; ?>">
+    <div id="footer_logo" class="float"><img src="<?php echo G5_URL; ?>/assets/img/footer_logo.png"></div><div id="footer_shape" class="float"></div>
     <div id="footer_right" class="float">
         <div id="footer_top">
             <div id="footer_intro" class="float"><a href="<?php echo G5_BBS_URL; ?>/content.php?co_id=intro">소계</a></div><div id="footer_shape1" class="float"></div>
@@ -45,5 +45,5 @@ $(function() {
 </script>
 
 <?php
-include_once($themes_path."/tail.sub.php");
+include_once("tail.sub.php");
 ?>

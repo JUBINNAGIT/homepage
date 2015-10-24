@@ -2,6 +2,7 @@
   position: absolute;
   left: 135px;
   top: 73px;
+  z-index: 200;
 }
 
 #menubar {
@@ -288,9 +289,12 @@
 #footer {
   position: absolute;
   left: 186px;
-  top: 930px;
   z-index: 15;
 }
+#footer.top{
+  top: 930px;
+}
+
 #footer div {
   position: relative;
 }

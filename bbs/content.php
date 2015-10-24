@@ -7,7 +7,7 @@ if( !isset($g5['content_table']) ){
 }
 
 if (G5_IS_MOBILE) {
-    include_once(G5_MOBILE_PATH.'/content.php');
+    include_once($themes_path.'/content.php');
     return;
 }
 

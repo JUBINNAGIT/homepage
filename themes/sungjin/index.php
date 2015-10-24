@@ -88,6 +88,7 @@ include_once($themes_path.'/head.php');
 ?>
     </div>
 <?php
+$footerClass = "top";
 include_once($themes_path.'/tail.php');
 ?>
 

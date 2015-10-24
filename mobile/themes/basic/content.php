@@ -49,8 +49,8 @@ $str = preg_replace($src, $dst, $str);
 if(trim($co['co_mobile_skin']) == '')
     $co['co_mobile_skin'] = 'basic';
 
-$content_skin_path = G5_MOBILE_PATH .'/'.G5_SKIN_DIR.'/content/'.$co['co_mobile_skin'];
-$content_skin_url  = G5_MOBILE_URL .'/'.G5_SKIN_DIR.'/content/'.$co['co_mobile_skin'];
+$content_skin_path = G5_SKIN_PATH.'/content/'.$co['co_mobile_skin'];
+$content_skin_url  = G5_SKIN_URL.'/content/'.$co['co_mobile_skin'];
 $skin_file = $content_skin_path.'/content.skin.php';
 
 if(is_file($skin_file)) {
