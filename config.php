@@ -151,6 +151,7 @@ define('G5_SPECIAL',        64); // 특수문자
 
 // 퍼미션
 define('G5_DIR_PERMISSION',  0755); // 디렉토리 생성시 퍼미션
+define('G5_VIDEO_DIR_PERMISSION',  0777); // 동영상 디렉토리 생성시 퍼미션
 define('G5_FILE_PERMISSION', 0644); // 파일 생성시 퍼미션
 
 // 모바일 인지 결정 $_SERVER['HTTP_USER_AGENT']
