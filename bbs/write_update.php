@@ -392,10 +392,8 @@ if (!$group['gr_use_access'] && $board['bo_read_level'] < 2 && !$secret) {
 }
 
 // uploads디렉토리에 파일을 업로드합니다. 
-$uploaddir = '/var/www/ams/video/'.$bo_table.'/'; 
-// 디렉토리가 없다면 생성합니다. (퍼미션도 변경하구요.)
-@mkdir($uploaddir, G5_VIDEO_DIR_PERMISSION);
-$uploadfile = $uploaddir . basename($_FILES['wr_5']['name']); 
+$uploaddir = '/var/www/ams/video/'; 
+$uploadfile = $uploaddir.basename($_FILES['wr_5']['name']); 
 
 if($_POST['MAX_FILE_SIZE'] < $_FILES['wr_5']['size']){ 
     alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
