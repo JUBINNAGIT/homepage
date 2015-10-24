@@ -400,7 +400,7 @@ $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 if($_POST['MAX_FILE_SIZE'] < $_FILES['userfile']['size']){ 
     alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
 } else { 
-    if(($_FILES['userfile']['error'] > 0) || ($_FILES['userfile']['size'] <= 0)){ 
+    if(($_FILES['userfile']['error'] > 0) || ($_FILES['wr_5']['size'] <= 0)){ 
         alert("파일 업로드에 실패하였습니다.: ".$_FILES['userfile']['error']); 
     } else { 
         // HTTP post로 전송된 것인지 체크합니다. 
