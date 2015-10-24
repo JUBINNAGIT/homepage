@@ -86,7 +86,7 @@ while ($row = sql_fetch_array($result))
                 delete_board_thumbnail($bo_table, $row2['bf_file']);
             }
 
-            @unlink('/var/www/ams/video/'.$row2['bf_source']);
+            @unlink('/var/www/ams/video/'.$bo_table.'/'.$row2['bf_source']);
         }
 
         // 에디터 썸네일 삭제
