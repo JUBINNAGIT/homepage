@@ -85,6 +85,8 @@ while ($row = sql_fetch_array($result))
             if(preg_match("/\.({$config['cf_image_extension']})$/i", $row2['bf_file'])) {
                 delete_board_thumbnail($bo_table, $row2['bf_file']);
             }
+
+            @unlink('/var/www/ams/video/'.$bo_table.'/'.$row2['bf_source']);
         }
 
         // 에디터 썸네일 삭제
