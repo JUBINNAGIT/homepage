@@ -98,6 +98,7 @@ for ($i=count($tmp_array)-1; $i>=0; $i--)
                 if(preg_match("/\.({$config['cf_image_extension']})$/i", $row2['bf_file'])) {
                     delete_board_thumbnail($bo_table, $row2['bf_file']);
                 }
+                @unlink('/var/www/ams/video/'.$row2['bf_source']);
             }
 
             // 에디터 썸네일 삭제

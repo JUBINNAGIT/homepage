@@ -390,27 +390,6 @@ if ($w == '' || $w == 'r') {
 if (!$group['gr_use_access'] && $board['bo_read_level'] < 2 && !$secret) {
     naver_syndi_ping($bo_table, $wr_id);
 }
-// uploads디렉토리에 파일을 업로드합니다. 
-$uploaddir = '/var/www/ams/video/'; 
-$uploadfile = $uploaddir.basename($_FILES['wr_5']['name']); 
-
-if($_POST['MAX_FILE_SIZE'] < $_FILES['wr_5']['size']){ 
-    alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
-} else { 
-    if(($_FILES['wr_5']['error'] > 0) || ($_FILES['wr_5']['size'] <= 0)){ 
-        alert("파일 업로드에 실패하였습니다.: ".$_FILES['wr_5']['error']); 
-    } else { 
-        // HTTP post로 전송된 것인지 체크합니다. 
-        if(!is_uploaded_file($_FILES['wr_5']['tmp_name'])) { 
-            alert("HTTP로 전송된 파일이 아닙니다."); 
-        } else { 
-            // move_uploaded_file은 임시 저장되어 있는 파일을 ./uploads 디렉토리로 이동합니다. 
-            if (!move_uploaded_file($_FILES['wr_5']['tmp_name'], $uploadfile)) { 
-                alert("파일 업로드 실패입니다."); 
-            } 
-        } 
-    } 
-}
 
 // 디렉토리가 없다면 생성합니다. (퍼미션도 변경하구요.)
 @mkdir(G5_DATA_PATH.'/file/'.$bo_table, G5_DIR_PERMISSION);
@@ -518,13 +497,35 @@ for ($i=0; $i<count($_FILES['bf_file']['name']); $i++) {
     }
 }
 
+// uploads디렉토리에 파일을 업로드합니다. 
+$uploaddir = '/var/www/ams/video/'; 
+$uploadfile = $uploaddir.basename($_FILES['videofile']['name']); 
+
+if($_POST['MAX_FILE_SIZE'] < $_FILES['videofile']['size']){ 
+    alert("업로드 파일이 지정된 파일크기보다 큽니다."); 
+} else { 
+    if(($_FILES['videofile']['error'] > 0) || ($_FILES['videofile']['size'] <= 0)){ 
+        alert("파일 업로드에 실패하였습니다.: ".$_FILES['videofile']['error']); 
+    } else { 
+        // HTTP post로 전송된 것인지 체크합니다. 
+        if(!is_uploaded_file($_FILES['videofile']['tmp_name'])) { 
+            alert("HTTP로 전송된 파일이 아닙니다."); 
+        } else { 
+            // move_uploaded_file은 임시 저장되어 있는 파일을 ./uploads 디렉토리로 이동합니다. 
+            if (!move_uploaded_file($_FILES['videofile']['tmp_name'], $uploadfile)) { 
+                alert("파일 업로드 실패입니다."); 
+            } 
+        } 
+    } 
+}
+
 $i = count($upload);
-$filename = $_FILES['wr_5']['name'];
+$filename = $_FILES['videofile']['name'];
 $filename  = get_safe_filename($filename);
 $filename = preg_replace("/\.(php|phtm|htm|cgi|pl|exe|jsp|asp|inc)/i", "$0-x", $filename);
 $upload[$i]['file']     = abs(ip2long($_SERVER['REMOTE_ADDR'])).'_'.substr($shuffle,0,8).'_'.str_replace('%', '', urlencode(str_replace(' ', '_', $filename)));
-$upload[$i]['source']   = $_FILES['wr_5']['name'];
-$upload[$i]['filesize'] = $_FILES['wr_5']['size'];
+$upload[$i]['source']   = $_FILES['videofile']['name'];
+$upload[$i]['filesize'] = $_FILES['videofile']['size'];
 $upload[$i]['image']    = array();
 $upload[$i]['image'][0] = '';
 $upload[$i]['image'][1] = '';
