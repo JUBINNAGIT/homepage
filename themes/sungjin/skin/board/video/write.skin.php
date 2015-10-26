@@ -10,7 +10,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <script>
     function setWr_5(value) {
-        var form = a.document.getElementById("fwrite");
+        var form = document.getElementById("fwrite");
         var wr_5 = document.createElement("input");
         
         wr_5.setAttribute("type", "hidden");
