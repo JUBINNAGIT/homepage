@@ -49,44 +49,6 @@ $v_height = '377';  // 동영상 높이 지정
     </section>
 
     <?php
-    if ($view['file']['count']) {
-        $cnt = 0;
-        for ($i=0; $i<count($view['file']); $i++) {
-            if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view'])
-                $cnt++;
-        }
-    }
-     ?>
-
-    <?php if($cnt) { ?>
-    <!-- 첨부파일 시작 { -->
-    <section id="bo_v_file">
-        <h2>첨부파일</h2>
-        <ul>
-        <?php
-        // 가변 파일
-        for ($i=0; $i<count($view['file']); $i++) {
-            if (isset($view['file'][$i]['source']) && $view['file'][$i]['source'] && !$view['file'][$i]['view']) {
-         ?>
-            <li>
-                <a href="<?php echo $view['file'][$i]['href'];  ?>" class="view_file_download">
-                    <img src="<?php echo $board_skin_url ?>/img/icon_file.gif" alt="첨부">
-                    <strong><?php echo $view['file'][$i]['source'] ?></strong>
-                    <?php echo $view['file'][$i]['bf_content'] ?> (<?php echo $view['file'][$i]['size'] ?>)
-                </a>
-                <span class="bo_v_file_cnt"><?php echo $view['file'][$i]['download'] ?>회 다운로드</span>
-                <span>DATE : <?php echo $view['file'][$i]['datetime'] ?></span>
-            </li>
-        <?php
-            }
-        }
-         ?>
-        </ul>
-    </section>
-    <!-- } 첨부파일 끝 -->
-    <?php } ?>
-
-    <?php
     if (implode('', $view['link'])) {
      ?>
      <!-- 관련링크 시작 { -->
