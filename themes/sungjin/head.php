@@ -36,9 +36,10 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">',
             $gnb_zindex = 999; // gnb_1dli z-index 값 설정용
 
             for ($i=0; $row=sql_fetch_array($result); $i++) {
+                $menu[$row['me_name']] = array();
             ?>
             <li class="gnb_1dli" style="z-index:<?php echo $gnb_zindex--; ?>">
-                <a href="<?php echo $row['me_link']; ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
+                <a href="<?php echo $row['me_link'].'&me_name='.urlencode($row['me_name']); ?>" target="_<?php echo $row['me_target']; ?>" class="gnb_1da"><?php echo $row['me_name'] ?></a>
                 <?php
                 $sql2 = " select *
                             from {$g5['menu_table']}
@@ -49,10 +50,11 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">',
                 $result2 = sql_query($sql2);
 
                 for ($k=0; $row2=sql_fetch_array($result2); $k++) {
+                    $menu[$row['me_name']][$k] = $row2;
                     if($k == 0)
                         echo '<ul class="gnb_2dul">'.PHP_EOL;
                 ?>
-                    <li class="gnb_2dli"><a href="<?php echo $row2['me_link']; ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
+                    <li class="gnb_2dli"><a href="<?php echo $row2['me_link'].'&me_name='.urlencode($row['me_name']); ?>" target="_<?php echo $row2['me_target']; ?>" class="gnb_2da"><?php echo $row2['me_name'] ?></a></li>
                 <?php
                 }
 

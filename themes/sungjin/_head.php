@@ -20,8 +20,17 @@ include_once($themes_path.'/head.php');
     } else {
     	$sub_title=$board['bo_subject'];
     } ?>
-    <div id="side_title"><?php echo $inTitle ?></div>
-    <div id="side_sub_title"><?php echo $sub_title ?></div>
+    <div id="side_title"><?php echo $me_name ?></div>
+    <div id="side_sub_title">
+        <ul>
+        <?php 
+        $len = count($menu[$me_name]);
+        for ($i=0; $i<$len; $i++) {
+        ?>
+            <li><a href="<?php echo $menu[$me_name][$i]['me_link'].'&me_name='.urlencode($me_name);?>"><?php echo $menu[$me_name][$i]['me_name']; ?></a></li>
+        <?php } ?>
+        </ul>
+    </div>
     <div id="side_top_line"></div>
     <div id="side_middle_line"></div>
     <div id="side_left_line"></div>

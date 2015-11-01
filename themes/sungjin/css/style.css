@@ -67,6 +67,8 @@
   top: 495.198px;
   z-index: 31;
 }
+#side_sub_title  ul {margin:0 0 10px;padding:0;list-style:none}
+
 #side_top_line {
   background-image: url("../img/side_top_line.png");
   position: absolute;

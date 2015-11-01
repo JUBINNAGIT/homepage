@@ -89,7 +89,7 @@ a:hover, a:focus, a:active {color:#000;text-decoration:underline}
 
 #aside {float:right;margin:0 0 0 -1px;width:210px;border-left:1px solid #dde4e9;background:#fff}
 
-#container {z-index:32;position:relative;float:left;left:0px;top:0px;padding:345px 16px 15px 395px;width:869px;min-height:500px;height:auto !important;height:500px;border-right:1px solid #dde4e9;font-size:1em;zoom:1}
+#container {z-index:30;position:relative;float:left;left:0px;top:0px;padding:345px 16px 15px 395px;width:869px;min-height:500px;height:auto !important;height:500px;border-right:1px solid #dde4e9;font-size:1em;zoom:1}
 #container:after {display:block;visibility:hidden;clear:both;content:""}
 #container_title {margin-bottom:20px;font-size:1.2em;font-weight:bold}
 

@@ -119,6 +119,7 @@ $member = array();
 $board  = array();
 $group  = array();
 $g5     = array();
+$menu   = array();
 
 
 //==============================================================================
@@ -361,6 +362,13 @@ if (isset($_REQUEST['bo_table'])) {
     $bo_table = substr($bo_table, 0, 20);
 } else {
     $bo_table = '';
+}
+
+if (isset($_REQUEST['me_name'])) {
+    $me_name = preg_replace('/[^a-z0-9가-힣_\s]/i', '', trim(urldecode($_REQUEST['me_name'])));
+    $me_name = substr($me_name, 0, 20);
+} else {
+    $me_name = '';
 }
 
 // URL ENCODING
