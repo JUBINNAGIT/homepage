@@ -20,7 +20,7 @@ include_once($themes_path.'/head.php');
     } else {
     	$sub_title=$board['bo_subject'];
     } ?>
-    <div id="side_title"><?php echo $me_name ?></div>
+    <div id="side_title"><?php  echo ($me_name) ? $me_name  : $board['bo_subject']; ?></div>
     <div id="side_sub_title">
         <ul>
         <?php 
