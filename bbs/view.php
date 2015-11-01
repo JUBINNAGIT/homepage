@@ -14,10 +14,10 @@ if ($sca || $stx) {
     // where 문을 얻음
     $sql_search = get_sql_search($sca, $sfl, $stx, $sop);
     $search_href = './board.php?bo_table='.$bo_table.'&amp;page='.$page.$qstr;
-    $list_href = './board.php?bo_table='.$bo_table;
+    $list_href = './board.php?bo_table='.$bo_table.'&me_name='.urlencode($me_name);
 } else {
     $search_href = '';
-    $list_href = './board.php?bo_table='.$bo_table.'&amp;page='.$page;
+    $list_href = './board.php?bo_table='.$bo_table.'&amp;page='.$page.'&me_name='.urlencode($me_name);
 }
 
 if (!$board['bo_use_list_view']) {
@@ -47,36 +47,36 @@ if (!$board['bo_use_list_view']) {
 $prev_href = '';
 if (isset($prev['wr_id']) && $prev['wr_id']) {
     $prev_wr_subject = get_text(cut_str($prev['wr_subject'], 255));
-    $prev_href = './board.php?bo_table='.$bo_table.'&amp;wr_id='.$prev['wr_id'].$qstr;
+    $prev_href = './board.php?bo_table='.$bo_table.'&amp;wr_id='.$prev['wr_id'].$qstr.'&me_name='.urlencode($me_name);
 }
 
 // 다음글 링크
 $next_href = '';
 if (isset($next['wr_id']) && $next['wr_id']) {
     $next_wr_subject = get_text(cut_str($next['wr_subject'], 255));
-    $next_href = './board.php?bo_table='.$bo_table.'&amp;wr_id='.$next['wr_id'].$qstr;
+    $next_href = './board.php?bo_table='.$bo_table.'&amp;wr_id='.$next['wr_id'].$qstr.'&me_name='.urlencode($me_name);
 }
 
 // 쓰기 링크
 $write_href = '';
 if ($member['mb_level'] >= $board['bo_write_level'])
-    $write_href = './write.php?bo_table='.$bo_table;
+    $write_href = './write.php?bo_table='.$bo_table.'&me_name='.urlencode($me_name);
 
 // 답변 링크
 $reply_href = '';
 if ($member['mb_level'] >= $board['bo_reply_level'])
-    $reply_href = './write.php?w=r&amp;bo_table='.$bo_table.'&amp;wr_id='.$wr_id.$qstr;
+    $reply_href = './write.php?w=r&amp;bo_table='.$bo_table.'&amp;wr_id='.$wr_id.$qstr.'&me_name='.urlencode($me_name);
 
 // 수정, 삭제 링크
 $update_href = $delete_href = '';
 // 로그인중이고 자신의 글이라면 또는 관리자라면 비밀번호를 묻지 않고 바로 수정, 삭제 가능
 if (($member['mb_id'] && ($member['mb_id'] == $write['mb_id'])) || $is_admin) {
-    $update_href = './write.php?w=u&amp;bo_table='.$bo_table.'&amp;wr_id='.$wr_id.'&amp;page='.$page.$qstr;
-    $delete_href = './delete.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.'&amp;page='.$page.urldecode($qstr);
+    $update_href = './write.php?w=u&amp;bo_table='.$bo_table.'&amp;wr_id='.$wr_id.'&amp;page='.$page.$qstr.'&me_name='.urlencode($me_name);
+    $delete_href = './delete.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.'&amp;page='.$page.urldecode($qstr).'&me_name='.urlencode($me_name);
     if ($is_admin)
     {
         set_session("ss_delete_token", $token = uniqid(time()));
-        $delete_href ='./delete.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.'&amp;token='.$token.'&amp;page='.$page.urldecode($qstr);
+        $delete_href ='./delete.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.'&amp;token='.$token.'&amp;page='.$page.urldecode($qstr).'&me_name='.urlencode($me_name);
     }
 }
 else if (!$write['mb_id']) { // 회원이 쓴 글이 아니라면

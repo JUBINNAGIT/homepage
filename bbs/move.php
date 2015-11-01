@@ -13,7 +13,7 @@ if ($is_admin != 'board' && $is_admin != 'group' && $is_admin != 'super')
     alert_close("게시판 관리자 이상 접근이 가능합니다.");
 
 $g5['title'] = '게시물 ' . $act;
-include_once(G5_PATH.'/head.sub.php');
+include_once($themes_path.'/head.sub.php');
 
 $wr_id_list = '';
 if ($wr_id)

@@ -95,7 +95,7 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
     $list[$i]['bo_table'] = $row['bo_table'];
     $list[$i]['name'] = $name;
     $list[$i]['comment'] = $comment;
-    $list[$i]['href'] = './board.php?bo_table='.$row['bo_table'].'&amp;wr_id='.$row2['wr_id'].$comment_link;
+    $list[$i]['href'] = './board.php?bo_table='.$row['bo_table'].'&amp;wr_id='.$row2['wr_id'].$comment_link.'&me_name='.urlencode($me_name);
     $list[$i]['datetime'] = $datetime;
     $list[$i]['datetime2'] = $datetime2;
 
