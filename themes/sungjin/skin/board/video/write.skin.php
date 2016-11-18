@@ -155,8 +155,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <tr>
             <th scope="row"><label for="wr_5">동영상링크 RTMP</label></th>
             <td>
-                <input type="hidden" name="MAX_FILE_SIZE" value="2048000000" >
-                <input name="videofile" type="file" id="wr_5" onChange="setWr_5(this)" value="<?php echo $write['wr_5'] ?>" class="frm_file frm_input"> <br/><br/>
+                <input type="text" name="wr_5" value="<?php echo $write['wr_5'] ?>" id="wr_5" class="frm_input" size="90" maxlength="200"> <br/><br/>
 				<span style="color:#777;">※ 동영상 링크 주소입력 (rtmp://domain/ 이후 파일경로 입력), 파일형식:mp4파일</span>
 			</td>
         </tr>

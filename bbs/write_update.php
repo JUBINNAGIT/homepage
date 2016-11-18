@@ -75,17 +75,17 @@ if (!$is_admin && $board['bo_use_secret'] == 2) {
     $secret = 'secret';
 }
 
-$html = '';
+$html = ' ';
 if (isset($_POST['html']) && $_POST['html']) {
     $html = $_POST['html'];
 }
 
-$mail = '';
+$mail = ' ';
 if (isset($_POST['mail']) && $_POST['mail']) {
     $mail = $_POST['mail'];
 }
 
-$notice = '';
+$notice = ' ';
 if (isset($_POST['notice']) && $_POST['notice']) {
     $notice = $_POST['notice'];
 }

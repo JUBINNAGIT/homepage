@@ -21,8 +21,8 @@ include_once($themes_path.'/head.php');
     </div>
     
     <div class="design_shape">
-        <div class="subject">Realize<br><font style="color:black">Bible</font></div>
-        <div class="subject_">놀라운 성경이야기</div>
+        <!--div class="subject">Realize<br><font style="color:black">Bible</font></div>
+        <div class="subject_">놀라운 성경이야기</div-->
         <div class="page"></div>
         <div class="btn"></div>
         <div class="visual_line"></div>

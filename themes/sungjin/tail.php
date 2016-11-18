@@ -31,7 +31,7 @@ if (G5_IS_MOBILE) {
             <div id="footer_find" class="float">찾아오시는길</div>
         </div>
         <div id="footer_bottom">
-            <div id="footer_address">부천시 원미구 중동. 신중동역 부근</div>
+            <div id="footer_address">부천시 원미구 중동 - 신중동역 5번출구 15분거리 위치.</div>
         </div>
     </div>
 </div>
