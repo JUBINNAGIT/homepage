@@ -17,10 +17,6 @@ $v_height = '377';  // 동영상 높이 지정
 <link href="<?php echo $board_skin_url ?>/video-js/video-js.css" rel="stylesheet">
 <script src="<?php echo $board_skin_url ?>/video-js/video.js"></script>
 <script src="<?php echo $board_skin_url ?>/video-js/jwplayer.js"></script>
-<!--
-<script src="<?php echo $board_skin_url ?>/video-js/swfobject.js"></script>
-<script src="<?php echo $board_skin_url ?>/video-js/hdwplayer.js"></script>
--->
 <script>
   videojs.options.flash.swf = "<?php echo $board_skin_url ?>/video-js/video-js.swf";
 </script>
@@ -173,18 +169,6 @@ $v_height = '377';  // 동영상 높이 지정
 				$v_logo = $board_skin_url."/video-js/logo.jpg";
 			}
 		?>
-            <!--
-		<div id='video_link_rtmp'>This text will be replaced</div>
-		<script type='text/javascript'>
-			var so = new SWFObject('<?php echo $board_skin_url."/video-js/player.swf"?>','ply','<?php echo $v_width?>','<?php echo $v_height?>','9','#000000');
-			so.addParam('allowfullscreen','true');
-			so.addParam('allowscriptaccess','always');
-			so.addParam('wmode','opaque');
-			so.addVariable('file','<?php echo $view[wr_5]?>');
-			so.addVariable('streamer','rtmp://106.245.233.50');
-			so.write('video_link_rtmp');
-		</script>
-            -->
 
             <div id='video_link_rtmp'>This text will be replaced</div>
             <script type='text/javascript'>
@@ -200,27 +184,6 @@ $v_height = '377';  // 동영상 높이 지정
                     width: <?php echo $v_width?>
                 });
             </script>
-
-            <!--
-            <div id='video_link_rtmp'>This text will be replaced</div>
-            <script type='text/javascript'>
-                hdwplayer({ 
-                    id       : 'video_link_rtmp',
-                    swf      : '<?php echo $board_skin_url."/video-js/hdwplayer.swf"?>',
-                    width    : '630',
-                    height   : '360',
-                    type     : 'rtmp',
-                    streamer : 'rtmp://106.245.233.50/',
-                    video    : '<?php echo $view['wr_5']?>',
-                    rtsp     : '',
-                    hls      : '',
-                    preview  : '<?php echo $v_logo?>',
-                    license  : '',
-                    logo     : '<?php echo $v_logo?>',
-                    autoStart: 'false'
-                });     
-            </script>
-            -->
 
 		<?php } ?>
 
