@@ -8,20 +8,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <section id="bo_w">
     <h2 id="container_title"><?php echo $g5['title'] ?></h2>
 
-    <script>
-    function setWr_5(value) {
-        if (value.files && value.files.length > 0) { 
-            var form = document.getElementById("fwrite");
-            var wr_5 = document.createElement("input");
-            
-            wr_5.setAttribute("type", "hidden");
-            wr_5.setAttribute("name", 'wr_5');
-            wr_5.setAttribute("value", value.files[0].name);
-            form.appendChild(wr_5);
-        }
-    }
-
-    </script>
     <!-- 게시물 작성/수정 시작 { -->
     <form name="fwrite" id="fwrite" action="<?php echo $action_url ?>" onsubmit="return fwrite_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off" style="width:<?php echo $width; ?>">
     <input type="hidden" name="uid" value="<?php echo get_uniqid(); ?>">

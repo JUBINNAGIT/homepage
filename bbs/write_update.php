@@ -1,5 +1,5 @@
 <?php
-에nclude_once('./_common.php');
+include_once('./_common.php');
 include_once(G5_LIB_PATH.'/naver_syndi.lib.php');
 include_once(G5_CAPTCHA_PATH.'/captcha.lib.php');
 
@@ -519,18 +519,18 @@ for ($i=0; $i<count($_FILES['bf_file']['name']); $i++) {
 //     } 
 // }
 
-$i = count($upload);
-$filename = $_FILES['videofile']['name'];
-$filename  = get_safe_filename($filename);
-$filename = preg_replace("/\.(php|phtm|htm|cgi|pl|exe|jsp|asp|inc)/i", "$0-x", $filename);
-$upload[$i]['file']     = abs(ip2long($_SERVER['REMOTE_ADDR'])).'_'.substr($shuffle,0,8).'_'.str_replace('%', '', urlencode(str_replace(' ', '_', $filename)));
-$upload[$i]['source']   = $_FILES['videofile']['name'];
-$upload[$i]['filesize'] = $_FILES['videofile']['size'];
-$upload[$i]['image']    = array();
-$upload[$i]['image'][0] = '';
-$upload[$i]['image'][1] = '';
-$upload[$i]['image'][2] = '';
-$upload[$i]['del_check'] = false;
+// $i = count($upload);
+// $filename = $_FILES['videofile']['name'];
+// $filename  = get_safe_filename($filename);
+// $filename = preg_replace("/\.(php|phtm|htm|cgi|pl|exe|jsp|asp|inc)/i", "$0-x", $filename);
+// $upload[$i]['file']     = abs(ip2long($_SERVER['REMOTE_ADDR'])).'_'.substr($shuffle,0,8).'_'.str_replace('%', '', urlencode(str_replace(' ', '_', $filename)));
+// $upload[$i]['source']   = $_FILES['videofile']['name'];
+// $upload[$i]['filesize'] = $_FILES['videofile']['size'];
+// $upload[$i]['image']    = array();
+// $upload[$i]['image'][0] = '';
+// $upload[$i]['image'][1] = '';
+// $upload[$i]['image'][2] = '';
+// $upload[$i]['del_check'] = false;
 
 
 // 나중에 테이블에 저장하는 이유는 $wr_id 값을 저장해야 하기 때문입니다.
