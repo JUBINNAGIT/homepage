@@ -172,7 +172,11 @@ $v_height = '240';  // 동영상 높이 지정
                 symlink("/home/FTP/ams/video/".$view['wr_5'],$path);
             }
 		?>
-<!--             <div id="player"></div>
+            <video id="video_link" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" height="<?php echo $v_height?>" poster="<?php echo $v_logo?>" data-setup="{}">
+            <source src="http://106.245.233.50:8080/<?php echo $view['wr_5']?>" type='video/mp4' />
+            </video>
+<!--
+            <div id="player"></div>
             <script>
                 flowplayer('#player', {
                   ratio: 0.5625,
@@ -187,6 +191,7 @@ $v_height = '240';  // 동영상 높이 지정
             </script>
             </script>
  -->
+            <!--
 		<div id='video_link_rtmp'>Not support 'RTMP' streaming.</div>
 		<script type='text/javascript'>
 			var so = new SWFObject('<?php echo $board_skin_url."/video-js/player.swf"?>','ply','<?php echo $v_width?>','<?php echo $v_height?>','9','#000000');
@@ -197,7 +202,6 @@ $v_height = '240';  // 동영상 높이 지정
 			so.addVariable('streamer','http://106.245.233.50:8080');
 			so.write('video_link_rtmp');
 		</script>
-            <!--
 
 
             <div id='video_link_rtmp'>Not support 'RTMP' streaming.</div>
