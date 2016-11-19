@@ -179,8 +179,8 @@ $v_height = '240';  // 동영상 높이 지정
                   clip: {
                     sources: [{
                                 type:"video/mp4",
-                                src:"http://jubitna.kr:8080/<?$view['wr_5']?>"
-                            }]
+                                src:"http://jubitna.kr:8080/<?php$view['wr_5']?>"
+                            }]  
                   },
                   embed: false
                 });
