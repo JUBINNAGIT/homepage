@@ -17,13 +17,13 @@ $v_height = '240';  // 동영상 높이 지정
 <link href="<?php echo $board_skin_url ?>/video-js/video-js.css" rel="stylesheet">
 <script src="<?php echo $board_skin_url ?>/video-js/video.js"></script>
 <script src="<?php echo $board_skin_url ?>/video-js/jwplayer.js"></script>
-<!--
-<script src="<?php echo $board_skin_url ?>/video-js/swfobject.js"></script>
-<script src="<?php echo $board_skin_url ?>/video-js/hdwplayer.js"></script>
--->
 <script>
   videojs.options.flash.swf = "<?php echo $board_skin_url ?>/video-js/video-js.swf";
 </script>
+<!-- Flowplayer, free version-->
+<link rel="stylesheet" href="//releases.flowplayer.org/6.0.5/skin/minimalist.css">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
 <!-- video-js end -->
 
 
@@ -166,22 +166,25 @@ $v_height = '240';  // 동영상 높이 지정
 			} else { 
 				$v_logo = $board_skin_url."/video-js/logo.jpg";
 			}
+            $path = "/home/FTP/ams/www/".$view['wr_5'];
+
+            if (!file_exists($path)) {
+                symlink("/home/FTP/ams/video/".$view['wr_5'],$path);
+            }
 		?>
-            <div id='video_link_rtmp'>Not support 'RTMP' streaming.</div>
-            <script type='text/javascript'>
-                jwplayer("video_link_rtmp").setup({
-                    playlist: [{
-                        image: "<?php echo $v_logo?>",
-                        sources: [{ 
-                            file: "rtmp://106.245.233.50/<?php echo $view['wr_5']?>"
-                        },{
-                            file: "http://www.w3schools.com/html/mov_bbb.mp4"
-                        }]
-                    }],
-                    height: <?php echo $v_height?>,
-                    primary: "flash",
-                    width: <?php echo $v_width?>
+            <div id="player"></div>
+            <script>
+                flowplayer('#player', {
+                  ratio: 0.5625,
+                  clip: {
+                    sources: [{
+                                type:"video/mp4",
+                                src:"http://jubitna.kr:8080/<?$view['wr_5']?>"
+                            }]
+                  },
+                  embed: false
                 });
+            </script>
             </script>
 
             <!--
