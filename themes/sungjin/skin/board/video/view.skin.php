@@ -20,6 +20,10 @@ $v_height = '377';  // 동영상 높이 지정
 <script>
   videojs.options.flash.swf = "<?php echo $board_skin_url ?>/video-js/video-js.swf";
 </script>
+<!-- Flowplayer, free version-->
+<link rel="stylesheet" href="//releases.flowplayer.org/6.0.5/skin/minimalist.css">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
 <!-- video-js end -->
 
 
@@ -170,7 +174,7 @@ $v_height = '377';  // 동영상 높이 지정
 			}
 		?>
 
-            <div id='video_link_rtmp'>This text will be replaced</div>
+<!--             <div id='video_link_rtmp'>This text will be replaced</div>
             <script type='text/javascript'>
                 jwplayer("video_link_rtmp").setup({
                     playlist: [{
@@ -184,7 +188,20 @@ $v_height = '377';  // 동영상 높이 지정
                     width: <?php echo $v_width?>
                 });
             </script>
-
+ -->            
+            <div id="player"></div>
+            <script>
+                flowplayer('#player', {
+                  ratio: 0.5625,
+                  clip: {
+                    sources: [{
+                                type:"video/flash",
+                                src:"rtmp://106.245.233.50/<?php echo $view['wr_5']?>"
+                            }]
+                  },
+                  embed: false
+                });
+            </script>
 		<?php } ?>
 
 		<!-- 업로드 동영상 video-js로 실행 -->

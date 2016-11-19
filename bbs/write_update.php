@@ -209,12 +209,16 @@ if ($w == '' || $w == 'r') {
         $wr_reply = '';
     }
 
+    $option = $html;
+    $option = ($option == '') ? $secret : $option + ',' + $secret;
+    $option = ($option == '') ? $emil : $option + ',' + $mail;
+
     $sql = " insert into $write_table
                 set wr_num = '$wr_num',
                      wr_reply = '$wr_reply',
                      wr_comment = 0,
                      ca_name = '$ca_name',
-                     wr_option = '$html,$secret,$mail',
+                     wr_option = '$option',
                      wr_subject = '$wr_subject',
                      wr_content = '$wr_content',
                      wr_link1 = '$wr_link1',
@@ -335,7 +339,7 @@ if ($w == '' || $w == 'r') {
 
     $sql = " update {$write_table}
                 set ca_name = '{$ca_name}',
-                     wr_option = '{$html},{$secret},{$mail}',
+                     wr_option = '{$option}',
                      wr_subject = '{$wr_subject}',
                      wr_content = '{$wr_content}',
                      wr_link1 = '{$wr_link1}',
@@ -547,7 +551,7 @@ for ($i=0; $i<count($upload); $i++)
         // 그렇지 않다면 내용만 업데이트 합니다.
         if ($upload[$i]['del_check'] || $upload[$i]['file'])
         {
-            $sql = " update {$g5['board_file_table']}
+            $sql = " update ignore {$g5['board_file_table']}
                         set bf_source = '{$upload[$i]['source']}',
                              bf_file = '{$upload[$i]['file']}',
                              bf_content = '{$bf_content[$i]}',
@@ -573,7 +577,7 @@ for ($i=0; $i<count($upload); $i++)
     }
     else
     {
-        $sql = " insert into {$g5['board_file_table']}
+        $sql = " insert ignore into {$g5['board_file_table']}
                     set bo_table = '{$bo_table}',
                          wr_id = '{$wr_id}',
                          bf_no = '{$i}',
