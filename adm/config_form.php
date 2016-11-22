@@ -650,7 +650,7 @@ if ($config['cf_icode_id'] && $config['cf_icode_pw']) {
             <td>
                 <select name="cf_mobile_member_skin" id="cf_mobile_member_skin" required class="required">
                 <?php
-                $arr = get_skin_dir('member', G5_MOBILE_PATH.'/'.G5_SKIN_DIR);
+                $arr = get_skin_dir('member', G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR);
                 for ($i=0; $i<count($arr); $i++) {
                     if ($i == 0) echo "<option value=\"\">선택</option>";
                     echo '<option value="'.$arr[$i].'"'.get_selected($config['cf_mobile_member_skin'], $arr[$i]).'>'.$arr[$i].'</option>'."\n";
