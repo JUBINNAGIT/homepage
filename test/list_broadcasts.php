@@ -79,7 +79,7 @@ if ($client->getAccessToken()) {
   }
 
   $_SESSION[$tokenSessionKey] = $client->getAccessToken();
-} elseif ($OAUTH2_CLIENT_ID == 'REPLACE_ME') {
+} elseif ($OAUTH2_CLIENT_ID == '1082468560229-8meusvbdoqjcame97n8a58je2b1c5i80.apps.googleusercontent.com') {
   $htmlBody = <<<END
   <h3>Client Credentials Required</h3>
   <p>
