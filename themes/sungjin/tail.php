@@ -31,7 +31,7 @@ if (G5_IS_MOBILE) {
             <div id="footer_find" class="float">찾아오시는길</div>
         </div>
         <div id="footer_bottom">
-            <div id="footer_address">부천시 원미구 중동 - 신중동역 5번출구 15분거리 위치.</div>
+            <div id="footer_address">경기도 부천시 부흥로303번길 50 '한양프라자 8층'<br/>전화: 070-2343-3423, e-mail: manager@jubitna.kr</div>
         </div>
     </div>
 </div>
