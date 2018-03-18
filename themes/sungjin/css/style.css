@@ -116,5 +116,66 @@
 }
 
 .latest_board {
+  position: absolute;
+  left: 927px;
+  top: 129px;
+  width: 320px;
+  height: 810px;
   overflow:scroll;
+  z-index: 40;
 }
+
+
+
+.gallery {
+  position: absolute;
+  left: 782px;
+  top: 130px;
+  width: 112px;
+  height: 732px;
+  z-index: 62;
+}
+.gallery .bottom_btn {
+  background-image: url("../assets/img/bottom_btn.png");
+  position: absolute;
+  left: 17px;
+  top: 738px;
+  width: 73px;
+  height: 15px;
+  z-index: 61;
+}
+.gallery .top_btn {
+  background-image: url("../assets/img/top_btn.png");
+  position: absolute;
+  left: 17px;
+  top: 28px;
+  width: 73px;
+  height: 15px;
+  z-index: 60;
+}
+.gallery .imgWrap {
+  position: absolute;
+  list-style: none;
+  padding-left: 0px;
+  left: 0px;
+  top: 53px;
+  margin: 0px;
+  height:679px;
+  overflow:scroll;
+  z-index: 59;
+}
+.gallery .img img {
+  width: 112px;
+  height: 74px;
+  margin: 10px 0px 0px 0px;
+}
+.gallery .title {
+  background-image: url("../assets/img/Gallery.png");
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  width: 66px;
+  height: 20px;
+  z-index: 58;
+}
+
