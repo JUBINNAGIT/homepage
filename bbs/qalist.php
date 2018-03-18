@@ -115,7 +115,7 @@ if(is_file($skin_file)) {
     $stx = get_text(stripslashes($stx));
     include_once($skin_file);
 } else {
-    echo '<div>'.str_replace(G5_PATH.'/', '', $skin_file).'이 존재하지 않습니다.</div>';
+    echo '<div>'.$skin_file).'이 존재하지 않습니다.</div>';
 }
 
 include_once('./qatail.php');
