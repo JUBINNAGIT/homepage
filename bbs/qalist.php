@@ -9,7 +9,7 @@ $qaconfig = get_qa_config();
 $g5['title'] = $qaconfig['qa_title'];
 include_once('./qahead.php');
 
-$skin_file = '/'.BASIC_THEMES_PATH.'/'.$qa_skin_path.'/list.skin.php';
+$skin_file = '/'.THEMES_PATH.'/'.$qa_skin_path.'/list.skin.php';
 
 $category_option = '';
 if ($qaconfig['qa_category']) {
