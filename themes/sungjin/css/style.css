@@ -134,7 +134,7 @@
   z-index: 62;
 }
 .gallery .bottom_btn {
-  background-image: url("../assets/img/bottom_btn.png");
+  background-image: url("../../../assets/img/bottom_btn.png");
   position: absolute;
   left: 17px;
   top: 738px;
@@ -143,7 +143,7 @@
   z-index: 61;
 }
 .gallery .top_btn {
-  background-image: url("../assets/img/top_btn.png");
+  background-image: url("../../../assets/img/top_btn.png");
   position: absolute;
   left: 17px;
   top: 28px;
@@ -169,7 +169,7 @@
   margin: 10px 0px 0px 0px;
 }
 .gallery .title {
-  background-image: url("../assets/img/Gallery.png");
+  background-image: url("../../../assets/img/Gallery.png");
   position: absolute;
   left: 20px;
   top: 0px;
@@ -177,4 +177,5 @@
   height: 20px;
   z-index: 58;
 }
+
 

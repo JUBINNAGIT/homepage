@@ -49,6 +49,7 @@ include_once($themes_path.'/head.php');
                 echo latest_gallery($skin, $page_no, 8, 25);
 ?>
                 </div>
+            </div>
             <div class="bottom_btn"></div>
         </div>
     </div>
