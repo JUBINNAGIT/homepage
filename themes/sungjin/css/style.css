@@ -119,13 +119,11 @@
   position: absolute;
   left: 927px;
   top: 129px;
-  width: 320px;
+  width: 360px;
   height: 810px;
   overflow:scroll;
   z-index: 40;
 }
-
-
 
 .gallery {
   position: absolute;
@@ -161,6 +159,7 @@
   top: 53px;
   margin: 0px;
   height:679px;
+  width:112px;
   overflow:scroll;
   z-index: 59;
 }
