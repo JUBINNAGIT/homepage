@@ -14,7 +14,7 @@ if ($sw == 'move'){
 auth_check($auth[$sub_menu], "r");
 
 $g5['title'] = '번호그룹 ' . $act;
-include_once(G5_PATH.'/head.sub.php');
+include_once($basic_themes_path.'/head.sub.php');
 
 $bk_no_list = implode(',', $_POST['bk_no']);
 
@@ -124,5 +124,5 @@ function fboardmoveall_submit(f)
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once($basic_themes_path.'/tail.sub.php');
 ?>

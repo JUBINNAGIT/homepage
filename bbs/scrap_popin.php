@@ -1,7 +1,7 @@
 <?php
 include_once('./_common.php');
 
-include_once(G5_PATH.'/head.sub.php');
+include_once($basic_themes_path.'/head.sub.php');
 
 if ($is_guest) {
     $href = './login.php?'.$qstr.'&amp;url='.urlencode('./board.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id);
@@ -56,5 +56,5 @@ HEREDOC;
 
 include_once($member_skin_path.'/scrap_popin.skin.php');
 
-include_once(G5_PATH.'/tail.sub.php');
+include_once($basic_themes_path.'/tail.sub.php');
 ?>

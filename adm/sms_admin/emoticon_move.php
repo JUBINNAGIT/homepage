@@ -9,7 +9,7 @@ if ($sw != 'move'){
 auth_check($auth[$sub_menu], "r");
 
 $g5['title'] = '이모티콘그룹 이동';
-include_once(G5_PATH.'/head.sub.php');
+include_once($basic_themes_path.'/head.sub.php');
 
 $fo_no_list = implode(',', $_POST['fo_no']);
 
@@ -110,5 +110,5 @@ function fboardmoveall_submit(f)
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once($basic_themes_path.'/tail.sub.php');
 ?>

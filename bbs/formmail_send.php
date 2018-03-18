@@ -51,9 +51,9 @@ if(!empty($file)) {
 
 //$html_title = $tmp_to . "님께 메일발송";
 $html_title = '메일 발송중';
-include_once(G5_PATH.'/head.sub.php');
+include_once($themes_path.'/head.sub.php');
 
 alert_close('메일을 정상적으로 발송하였습니다.');
 
-include_once(G5_PATH.'/tail.sub.php');
+include_once($basic_themes_path.'/tail.sub.php');
 ?>
