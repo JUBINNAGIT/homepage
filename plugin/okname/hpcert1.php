@@ -48,7 +48,7 @@ else {
 }
 
 $g5['title'] = 'KCB 휴대폰 본인확인';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 ?>
 
 <script>
@@ -80,5 +80,5 @@ if ($retcode == "B000") {
     echo ("<script>alert(\"$retcode\"); self.close();</script>");
 }
 
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

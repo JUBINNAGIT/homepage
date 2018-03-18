@@ -5,7 +5,7 @@ include_once("./_common.php");
 auth_check($auth[$sub_menu], 'w');
 
 $g5['title'] = '게시판 복사';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 ?>
 
 <div class="new_win">
@@ -66,5 +66,5 @@ function fboardcopy_check(f)
 
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

@@ -5,7 +5,7 @@ if ($is_guest)
     alert_close('회원만 조회하실 수 있습니다.');
 
 $g5['title'] = $member['mb_nick'].' 님의 포인트 내역';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $list = array();
 
@@ -23,5 +23,5 @@ $from_record = ($page - 1) * $rows; // 시작 열을 구함
 
 include_once($member_skin_path.'/point.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

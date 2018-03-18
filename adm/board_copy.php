@@ -66,5 +66,5 @@ function fboardcopy_check(f)
 
 
 <?php
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

@@ -538,8 +538,8 @@ if (G5_IS_MOBILE) {
     $faq_skin_url       = G5_MOBILE_URL .'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'].'/'.G5_SKIN_DIR.'/faq/'.$config['cf_mobile_faq_skin'];
     $themes_path        = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'];
     $themes_url         = G5_MOBILE_URL.'/'.G5_THEMES_DIR.'/'.$config['cf_mobile_themes'];
-    $bagic_themes_path  = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/basic';
-    $bagic_themes_url   = G5_MOBILE_URL.'/'.G5_THEMES_DIR.'/basic';
+    $basic_themes_path  = G5_MOBILE_PATH.'/'.G5_THEMES_DIR.'/basic';
+    $basic_themes_url   = G5_MOBILE_URL.'/'.G5_THEMES_DIR.'/basic';
     $skin               = $config['bo_skin'];
 } else {
     $board_skin_path    = G5_PATH.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/board/'.$board['bo_skin'];
@@ -556,16 +556,16 @@ if (G5_IS_MOBILE) {
     $faq_skin_url       = G5_URL.'/'.G5_THEMES_DIR.'/'.$config['cf_themes'].'/'.G5_SKIN_DIR.'/faq/'.$config['cf_faq_skin'];
     $themes_path        = G5_THEMES_PATH.'/'.$config['cf_themes'];
     $themes_url         = G5_THEMES_URL.'/'.$config['cf_themes'];
-    $bagic_themes_path  = G5_THEMES_PATH.'/basic';
-    $bagic_themes_url   = G5_THEMES_URL.'/basic';
+    $basic_themes_path  = G5_THEMES_PATH.'/basic';
+    $basic_themes_url   = G5_THEMES_URL.'/basic';
     $skin               = $config['bo_skin'];
 }
 //==============================================================================
 define('THEMES_PATH', $themes_path);
 define('THEMES_URL', $themes_url);
 
-define('BASIC_THEMES_PATH', $bagic_themes_path);
-define('BASIC_THEMES_URL', $bagic_themes_url);
+define('BASIC_THEMES_PATH', $basic_themes_path);
+define('BASIC_THEMES_URL', $basic_themes_url);
 
 define('G5_SKIN_URL',       THEMES_URL.'/'.G5_SKIN_DIR);
 define('G5_SKIN_PATH',      THEMES_PATH.'/'.G5_SKIN_DIR);

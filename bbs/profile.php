@@ -15,7 +15,7 @@ if (!$mb['mb_open'] && $is_admin != 'super' && $member['mb_id'] != $mb_id)
     alert_close('정보공개를 하지 않았습니다.');
 
 $g5['title'] = $mb['mb_nick'].'님의 자기소개';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $mb_nick = get_sideview($mb['mb_id'], $mb['mb_nick'], $mb['mb_email'], $mb['mb_homepage'], $mb['mb_open']);
 
@@ -29,5 +29,5 @@ $mb_profile = $mb['mb_profile'] ? conv_content($mb['mb_profile'],0) : '소개 �
 
 include_once($member_skin_path.'/profile.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

@@ -93,10 +93,10 @@ if (G5_IS_MOBILE) {
     $poll_skin_url  = G5_SKIN_URL.'/poll/'.$skin_dir;
 }
 
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 if (!file_exists($poll_skin_path.'/poll_result.skin.php')) die('skin error');
 include_once ($poll_skin_path.'/poll_result.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

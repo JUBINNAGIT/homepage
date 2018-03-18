@@ -39,5 +39,5 @@ $type_checked[$type] = 'checked';
 
 include_once($member_skin_path.'/formmail.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

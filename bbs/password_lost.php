@@ -7,10 +7,10 @@ if ($is_member) {
 }
 
 $g5['title'] = '회원정보 찾기';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $action_url = G5_HTTPS_BBS_URL."/password_lost2.php";
 include_once($member_skin_path.'/password_lost.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

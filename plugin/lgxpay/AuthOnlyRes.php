@@ -51,7 +51,7 @@ $xpay->Set("LGD_AUTHONLYKEY", $LGD_AUTHONLYKEY);
 $xpay->Set("LGD_PAYTYPE", $LGD_PAYTYPE);
 
 $g5['title'] = '휴대폰인증 결과';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 /*
  *************************************************
@@ -191,5 +191,5 @@ $(function() {
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

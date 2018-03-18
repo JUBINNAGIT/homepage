@@ -5,7 +5,7 @@ if ($is_guest)
     alert_close('회원만 이용하실 수 있습니다.');
 
 $g5['title'] = '내 쪽지함';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 if (!$kind) $kind = 'recv';
 
@@ -70,5 +70,5 @@ for ($i=0; $row=sql_fetch_array($result); $i++)
 
 include_once($member_skin_path.'/memo.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

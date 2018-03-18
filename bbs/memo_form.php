@@ -33,10 +33,10 @@ if ($me_recv_mb_id)
 }
 
 $g5['title'] = '쪽지 보내기';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $memo_action_url = G5_HTTPS_BBS_URL."/memo_form_update.php";
 include_once($member_skin_path.'/memo_form.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

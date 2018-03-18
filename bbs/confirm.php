@@ -1,6 +1,6 @@
 <?php
 include_once('./_common.php');
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 ?>
 
 <script>
@@ -31,5 +31,5 @@ if (confirm(conf)) {
 </noscript>
 
 <?php
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

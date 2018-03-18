@@ -19,7 +19,7 @@ if ($user) {
 }
 
 $g5['title'] = '페이스북 콜백';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 if ($user) {
     $sns_name = $user_profile['name'];
@@ -58,5 +58,5 @@ EOT;
 
 }
 
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

@@ -6,7 +6,7 @@ if ($is_admin != 'super')
     alert_close('최고관리자만 접근 가능합니다.');
 
 $g5['title'] = '메뉴 추가';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 // 코드
 if($new == 'new' || !$code) {
@@ -147,5 +147,5 @@ function add_menu_list(name, link, code)
 </script>
 
 <?php
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

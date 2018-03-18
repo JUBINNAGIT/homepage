@@ -44,7 +44,7 @@ exit;
 */
 
 $g5['title'] = '트위터 콜백';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 if (200 == $connection->http_code) {
     $content  = $connection->get('account/verify_credentials');
@@ -84,5 +84,5 @@ EOT;
 
 }
 
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

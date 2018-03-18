@@ -29,7 +29,7 @@ else
 }
 
 $g5['title'] = $t.' 쪽지 보기';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $sql = " select * from {$g5['memo_table']}
             where me_id = '$me_id'
@@ -67,5 +67,5 @@ $mb = get_member($memo['me_'.$unkind.'_mb_id']);
 
 include_once($member_skin_path.'/memo_view.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

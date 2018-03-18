@@ -93,7 +93,7 @@ set_session('ss_cert_sex',     ($field[9] == 1 ? 'M' : 'F'));
 set_session('ss_cert_dupinfo', $mb_dupinfo);
 
 $g5['title'] = 'KCB 아이핀 본인확인';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 ?>
 
 <script>
@@ -109,5 +109,5 @@ $(function() {
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

@@ -5,7 +5,7 @@ if (!$is_member)
     alert_close('회원만 조회하실 수 있습니다.');
 
 $g5['title'] = $member['mb_nick'].'님의 스크랩';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $sql_common = " from {$g5['scrap_table']} where mb_id = '{$member['mb_id']}' ";
 $sql_order = " order by ms_id desc ";
@@ -56,5 +56,5 @@ for ($i=0; $row=sql_fetch_array($result); $i++) {
 
 include_once($member_skin_path.'/scrap.skin.php');
 
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

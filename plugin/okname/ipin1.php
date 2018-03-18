@@ -35,7 +35,7 @@ $sig=$out[1];
 $curtime=$out[2];
 
 $g5['title'] = 'KCB 아이핀 본인확인';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 ?>
 
 <form name="kcbInForm" method="post" action="<?php echo $kcbForm_action; ?>">
@@ -53,5 +53,5 @@ document.kcbInForm.submit();
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

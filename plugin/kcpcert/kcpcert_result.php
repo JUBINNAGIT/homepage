@@ -82,7 +82,7 @@ $ct_cert->mf_clear();
 
 
 $g5['title'] = '휴대폰인증 결과';
-include_once(G5_PATH.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 // 결과 처리
 
@@ -196,5 +196,5 @@ $(function() {
 </script>
 
 <?php
-include_once(G5_PATH.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>

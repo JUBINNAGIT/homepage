@@ -2,7 +2,7 @@
 include_once('./_common.php');
 
 $g5['title'] = '이미지 크게보기';
-include_once($basic_themes_path.'/head.sub.php');
+include_once(BASIC_THEMES_PATH.'/head.sub.php');
 
 $filename = $_GET['fn'];
 $bo_table = $_GET['bo_table'];
@@ -106,5 +106,5 @@ $(function() {
 </script>
 
 <?php
-include_once($basic_themes_path.'/tail.sub.php');
+include_once(BASIC_THEMES_PATH.'/tail.sub.php');
 ?>
