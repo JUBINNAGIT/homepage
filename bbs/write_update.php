@@ -97,6 +97,7 @@ for ($i=1; $i<=10; $i++) {
         $$var = trim($_POST['wr_'.$i]);
     }
 }
+print('notics: '.$notics.', is_admin: '.$is_admin);
 
 @include_once($board_skin_path.'/write_update.head.skin.php');
 
