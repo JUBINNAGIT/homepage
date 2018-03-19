@@ -85,9 +85,11 @@ if (isset($_POST['mail']) && $_POST['mail']) {
     $mail = $_POST['mail'];
 }
 
-$notice_bo = ' ';
+alert('notice: '.$_POST['notice']);
+
+$notice = ' ';
 if (isset($_POST['notice']) && $_POST['notice']) {
-    $notice_bo = $_POST['notice'];
+    $notice = $_POST['notice'];
 }
 
 for ($i=1; $i<=10; $i++) {
@@ -110,7 +112,7 @@ if ($w == '' || $w == 'u') {
     }
 
 	// 외부에서 글을 등록할 수 있는 버그가 존재하므로 공지는 관리자만 등록이 가능해야 함
-	if (!$is_admin && $notice_bo) {
+	if (!$is_admin && $notice) {
 		alert('관리자만 공지할 수 있습니다.');
     }
 
@@ -261,7 +263,7 @@ if ($w == '' || $w == 'r') {
 
     // 쓰기 포인트 부여
     if ($w == '') {
-        if ($notice_bo) {
+        if ($notice) {
             $bo_notice = $wr_id.($board['bo_notice'] ? ",".$board['bo_notice'] : '');
             sql_query(" update {$g5['board_table']} set bo_notice = '{$bo_notice}' where bo_table = '{$bo_table}' ");
         }
@@ -369,7 +371,7 @@ if ($w == '' || $w == 'r') {
     sql_query($sql);
 
     /*
-    if ($notice_bo) {
+    if ($notice) {
         //if (!preg_match("/[^0-9]{0,1}{$wr_id}[\r]{0,1}/",$board['bo_notice']))
         if (!in_array((int)$wr_id, $notice_array)) {
             $bo_notice = $wr_id . ',' . $board['bo_notice'];
@@ -386,7 +388,7 @@ if ($w == '' || $w == 'r') {
     }
     */
 
-    $bo_notice = board_notice($board['bo_notice'], $wr_id, $notice_bo);
+    $bo_notice = board_notice($board['bo_notice'], $wr_id, $notice);
     sql_query(" update {$g5['board_table']} set bo_notice = '{$bo_notice}' where bo_table = '{$bo_table}' ");
 }
 
