@@ -85,6 +85,8 @@ if (isset($_POST['mail']) && $_POST['mail']) {
     $mail = $_POST['mail'];
 }
 
+alert($_POST['notice']);
+
 $notice = ' ';
 if (isset($_POST['notice']) && $_POST['notice']) {
     $notice = $_POST['notice'];
@@ -97,7 +99,6 @@ for ($i=1; $i<=10; $i++) {
         $$var = trim($_POST['wr_'.$i]);
     }
 }
-print('notics: '.$notics.', is_admin: '.$is_admin);
 
 @include_once($board_skin_path.'/write_update.head.skin.php');
 
