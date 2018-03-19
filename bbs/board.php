@@ -32,7 +32,7 @@ if (isset($wr_id) && $wr_id) {
         }
 
         // 그룹관리자 이상이라면 통과
-        if ($is_admin == "super" || $is_admin == "group") {
+        if ($is_admin == "super" || $is_admin == "group" || !trim($board['bo_1'])) {
             ;
         } else {
             // 그룹접근
