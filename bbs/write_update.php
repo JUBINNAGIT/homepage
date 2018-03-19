@@ -85,8 +85,6 @@ if (isset($_POST['mail']) && $_POST['mail']) {
     $mail = $_POST['mail'];
 }
 
-alert($_POST['notice']);
-
 $notice = ' ';
 if (isset($_POST['notice']) && $_POST['notice']) {
     $notice = $_POST['notice'];
