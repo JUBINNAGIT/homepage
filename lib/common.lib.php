@@ -784,7 +784,6 @@ function is_admin($mb_id)
     if ($config['cf_admin'] == $mb_id) return 'super';
     if (isset($group['gr_admin']) && ($group['gr_admin'] == $mb_id)) return 'group';
     if (isset($board['bo_admin']) && ($board['bo_admin'] == $mb_id)) return 'board';
-    if (isset($auth) && trim($auth)) return 'etx';
     return '';
 }
 

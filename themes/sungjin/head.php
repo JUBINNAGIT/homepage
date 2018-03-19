@@ -85,7 +85,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_THEMES_CSS_URL.'/style.css">',
                     function taginopen(){
                         var u = "<?php $member['mb_id'] ?>";
 
-                        var a=window.open('broadcast/jutv','popForm','location=no');
+                        var a=window.open('http://jubitna.kr:3001/index.html','popForm','location=no');
                         a.resizeTo(600,480);
                         a.moveTo(200,100);
         //                a.location.href = "http://jubitna.kr:3001/index.html";
