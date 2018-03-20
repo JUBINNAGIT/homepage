@@ -189,7 +189,14 @@ $v_height = '377';  // 동영상 높이 지정
                 });
             </script>
  -->            
+            <div class="flowplayer">
+                <video>
+                    <source type="video/mp4"
+                      src="rtmp://106.245.233.50/<?php echo $view['wr_5']?>">
+                </video>
+            </div>
 
+<!--
             <div id="player" class="flowplayer"></div>
             <script>
                 flowplayer('#player', {
@@ -203,6 +210,7 @@ $v_height = '377';  // 동영상 높이 지정
                   embed: false
                 });
             </script>
+-->
 		<?php } ?>
 
 		<!-- 업로드 동영상 video-js로 실행 -->
