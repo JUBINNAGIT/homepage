@@ -189,9 +189,10 @@ $v_height = '377';  // 동영상 높이 지정
                 });
             </script>
  -->            
-            <div class="flowplayer">
+            <div class="flowplayer" data-rtmp="rtmp://106.245.233.50/<?php echo $view['wr_5']?>" data-ratio="0.4167">
                 <video>
-                    <source type="video/mp4"
+                    <source type="video/flash" src="mp4:bauhaus">
+                    <source type="video/flash"
                       src="rtmp://106.245.233.50/<?php echo $view['wr_5']?>">
                 </video>
             </div>
