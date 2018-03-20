@@ -189,7 +189,7 @@ $v_height = '377';  // 동영상 높이 지정
                 });
             </script>
  -->            
-            <div class="flowplayer" data-rtmp="rtmp://106.245.233.50/" data-ratio="0.4167">
+            <div class="flowplayer" data-rtmp="rtmp://106.245.233.50" data-ratio="0.4167">
                 <video>
                     <source type="video/flash" src="mp4:<?php echo explode('.',$view['wr_5'])[0]?>">
                 </video>
