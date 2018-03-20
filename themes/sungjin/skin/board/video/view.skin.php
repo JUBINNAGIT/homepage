@@ -20,10 +20,12 @@ $v_height = '377';  // 동영상 높이 지정
 <script>
   videojs.options.flash.swf = "<?php echo $board_skin_url ?>/video-js/video-js.swf";
 </script>
-<!-- Flowplayer, free version-->
-<link rel="stylesheet" href="https://releases.flowplayer.org/7.2.4/skin/skin.css">
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://releases.flowplayer.org/7.2.4/flowplayer.min.js"></script>
+
+<script type="text/javascript" src="<?php echo $board_skin_url ?>/player/js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="<?php echo $board_skin_url ?>/player/js/majhdwplayer.js?xxx"></script>
+<script type="text/javascript" src="<?php echo $board_skin_url ?>/player/js/html5.hdwplayer.js"></script>
+<link rel="stylesheet" href="<?php echo $board_skin_url ?>/player/css/html5.hdwstyles.css" type="text/css" media="all">
+
 <!-- video-js end -->
 
 
@@ -189,11 +191,21 @@ $v_height = '377';  // 동영상 높이 지정
                 });
             </script>
  -->            
-            <div class="flowplayer" data-rtmp="rtmp://106.245.233.50" data-ratio="0.4167">
-                <video>
-                    <source type="video/flash" src="mp4:<?php echo explode('.',$view['wr_5'])[0]?>">
-                </video>
-            </div>
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px;"></div>
+            <script>
+                hdwplayer({ 
+                    id       : 'player',
+                    swf      : 'player/player.swf?api=true',
+                    width    : '640',
+                    height   : '360',
+                    video: "rtmp://106.245.233.50/<?php echo $view['wr_5']",
+                    license  : 'O1DML-1487-N2MMA-01982-MLONW-8551-OO23G', //license key for localhost
+                    autoStart: 'true',
+                    skinMode: 'static',
+                    isHD: true,
+                    api : true
+                });
+            </script>
 
 <!--
             <div id="player" class="flowplayer"></div>
