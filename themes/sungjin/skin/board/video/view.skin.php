@@ -199,7 +199,8 @@ $v_height = '377';  // 동영상 높이 지정
                     swf      : "<?php echo $board_skin_url.'player/player.swf?api=true'?>",
                     width    : "640",
                     height   : "360",
-                    video   : "rtmp://106.245.233.50/<?php echo $view['wr_5']?>",
+                    streamer : "rtmp://106.245.233.50",
+                    video    : "<?php echo $view['wr_5']?>"
                     license  : "O1DML-1487-N2MMA-01982-MLONW-8551-OO23G",
                     autoStart: "true",
                     skinMode: "static",
