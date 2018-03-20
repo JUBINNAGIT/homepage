@@ -200,8 +200,7 @@ $v_height = '377';  // 동영상 높이 지정
                     width    : "640",
                     height   : "360",
                     streamer : "rtmp://106.245.233.50",
-                    video    : "<?php echo $view['wr_5']?>"
-                    license  : "O1DML-1487-N2MMA-01982-MLONW-8551-OO23G",
+                    video    : "<?php echo $view['wr_5']?>",
                     autoStart: "true",
                     skinMode: "static",
                     isHD: true,
