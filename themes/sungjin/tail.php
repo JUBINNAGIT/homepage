@@ -31,7 +31,7 @@ if (G5_IS_MOBILE) {
             <div id="footer_find" class="float">찾아오시는길</div>
         </div>
         <div id="footer_bottom">
-            <div id="footer_address">경기도 부천시 부흥로303번길 50 '한양프라자 8층'<br/>전화: 070-2343-3423, e-mail: manager@jubitna.kr</div>
+            <div id="footer_address">경기도 부천시 부흥로303번길 50 '한양프라자 8층'<br/>전화: 032-655-1077, e-mail: jubitnach@gmail.com</div>
         </div>
     </div>
 </div>
