@@ -289,8 +289,10 @@ $v_height = '377';  // 동영상 높이 지정
 
     <?php
     // 코멘트 입출력
-    include_once('./view_comment.php');
-     ?>
+    if (trim($board['bo_2'])) {
+        include_once('./view_comment.php');
+    }
+    ?>
 
     <!-- 링크 버튼 시작 { -->
     <div id="bo_v_bot">

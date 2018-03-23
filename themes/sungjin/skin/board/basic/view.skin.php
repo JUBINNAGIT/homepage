@@ -221,35 +221,6 @@ $v_height = '377';  // 동영상 높이 지정
 
         <?php if ($is_signature) { ?><p><?php echo $signature ?></p><?php } ?>
 
-        <!-- 스크랩 추천 비추천 시작 { -->
-        <?php if ($scrap_href || $good_href || $nogood_href) { ?>
-        <div id="bo_v_act">
-            <?php if ($scrap_href) { ?><a href="<?php echo $scrap_href;  ?>" target="_blank" class="btn_b01" onclick="win_scrap(this.href); return false;">스크랩</a><?php } ?>
-            <?php if ($good_href) { ?>
-            <span class="bo_v_act_gng">
-                <a href="<?php echo $good_href.'&amp;'.$qstr ?>" id="good_button" class="btn_b01">추천 <strong><?php echo number_format($view['wr_good']) ?></strong></a>
-                <b id="bo_v_act_good"></b>
-            </span>
-            <?php } ?>
-            <?php if ($nogood_href) { ?>
-            <span class="bo_v_act_gng">
-                <a href="<?php echo $nogood_href.'&amp;'.$qstr ?>" id="nogood_button" class="btn_b01">비추천  <strong><?php echo number_format($view['wr_nogood']) ?></strong></a>
-                <b id="bo_v_act_nogood"></b>
-            </span>
-            <?php } ?>
-        </div>
-        <?php } else {
-            if($board['bo_use_good'] || $board['bo_use_nogood']) {
-        ?>
-        <div id="bo_v_act">
-            <?php if($board['bo_use_good']) { ?><span>추천 <strong><?php echo number_format($view['wr_good']) ?></strong></span><?php } ?>
-            <?php if($board['bo_use_nogood']) { ?><span>비추천 <strong><?php echo number_format($view['wr_nogood']) ?></strong></span><?php } ?>
-        </div>
-        <?php
-            }
-        }
-        ?>
-        <!-- } 스크랩 추천 비추천 끝 -->
     </section>
 
     <?php
@@ -258,8 +229,10 @@ $v_height = '377';  // 동영상 높이 지정
 
     <?php
     // 코멘트 입출력
-    include_once('./view_comment.php');
-     ?>
+    if (trim($board['bo_2'])) {
+        include_once('./view_comment.php');
+    }
+    ?>
 
     <!-- 링크 버튼 시작 { -->
     <div id="bo_v_bot">

@@ -191,8 +191,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
     <?php
     // 코멘트 입출력
-    include_once('./view_comment.php');
-     ?>
+    if (trim($board['bo_2'])) {
+        include_once('./view_comment.php');
+    }
+    ?>
 
     <!-- 링크 버튼 시작 { -->
     <div id="bo_v_bot">
