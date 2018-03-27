@@ -160,9 +160,27 @@ $v_height = '377';  // 동영상 높이 지정
 				$v_logo = $board_skin_url."/video-js/logo.jpg";
 			}
 		?>
+        <!--
 			<video id="video_link" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" height="<?php echo $v_height?>" poster="<?php echo $v_logo?>" data-setup="{}">
 			<source src="<?php echo $view['wr_4']?>" type='video/mp4' />
 			</video>
+        -->
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px;"></div>
+            <script type='text/javascript'>
+                hdwplayer({
+                    id       : "player",
+                    swf      : "<?php echo $board_skin_url.'/player/player.swf?api=true'?>",
+                    width    : "640",
+                    height   : "360",
+                    type     : "mp4",
+                    video    : "<?php echo $view['wr_4']?>",
+                    autoStart: "true",
+                    skinMode: "static",
+                    isHD: true,
+                    api : true
+                });
+            </script>
+
 		<?php } ?>
 
 		<!-- 링크 동영상 video-js로 실행 rtmp -->
@@ -210,21 +228,6 @@ $v_height = '377';  // 동영상 높이 지정
             </script>
 
 
-<!--
-            <div id="player" class="flowplayer"></div>
-            <script>
-                flowplayer('#player', {
-                  ratio: 0.5625,
-                  clip: {
-                    sources: [{
-                                type:"video/flash",
-                                src:"rtmp://106.245.233.50/<?php echo $view['wr_5']?>"
-                            }]
-                  },
-                  embed: false
-                });
-            </script>
--->
 		<?php } ?>
 
 		<!-- 업로드 동영상 video-js로 실행 -->
