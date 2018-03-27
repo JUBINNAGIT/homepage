@@ -239,9 +239,21 @@ $v_height = '377';  // 동영상 높이 지정
 				$v_logo = $board_skin_url."/video-js/logo.jpg";
 			}
 		?>
-			<video id="video_upload" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" height="<?php echo $v_height?>" poster="<?php echo $v_logo?>" data-setup="{}">
-			<source src="<?=G5_URL."/data/file/".$bo_table."/".$view[file][1][file]?>" type='video/mp4' />
-			</video>
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px;"></div>
+            <script type='text/javascript'>
+                hdwplayer({
+                    id       : "player",
+                    swf      : "<?php echo $board_skin_url.'/player/player.swf?api=true'?>",
+                    width    : "640",
+                    height   : "360",
+                    video    : "<?=G5_URL."/data/file/".$bo_table."/".$view[file][1][file]?>",
+                    autoStart: "true",
+                    skinMode: "static",
+                    isHD: true,
+                    api : true,
+                    shareDock : false
+                });
+            </script>
 		<?php } ?>
 
 		<!-- video end -->
