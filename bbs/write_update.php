@@ -76,6 +76,8 @@ if (!$is_admin && $board['bo_use_secret'] == 2) {
 }
 
 $html = '';
+alert($_POST['html']);
+
 if (isset($_POST['html']) && $_POST['html']) {
     $html = $_POST['html'];
 }
