@@ -9,7 +9,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
 <?php 
-$v_width = '100%';   // 동영상 넓이 지정
+$v_width = '70%';   // 동영상 넓이 지정
 ?>
 
 <!-- video-js -->
