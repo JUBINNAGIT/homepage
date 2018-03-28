@@ -9,8 +9,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
 <?php 
-$v_width = '320';   // 동영상 넓이 지정
-$v_height = '240';  // 동영상 높이 지정
+$v_width = '100%';   // 동영상 넓이 지정
 ?>
 
 <!-- video-js -->
@@ -127,14 +126,14 @@ $v_height = '240';  // 동영상 높이 지정
 		<!-- youtube -->
 		<?php if($view[wr_1]){ ?>
 		<div style="margin:0 0 10px 0;"> 
-			<iframe width="<?php echo $v_width?>" height="<?php echo $v_height?>" src="http://www.youtube.com/embed/<?php echo $view[wr_1]?>?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+			<iframe width="<?php echo $v_width?>" src="http://www.youtube.com/embed/<?php echo $view[wr_1]?>?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<?php } ?>
 
 		<!-- vimeo -->
 		<?php if($view[wr_2]){ ?>
 		<div style="margin:0 0 10px 0;">
-			<iframe src="//player.vimeo.com/video/<?php echo $view[wr_2]?>" width="<?php echo $v_width?>" height="<?php echo $v_height?>" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<iframe src="//player.vimeo.com/video/<?php echo $view[wr_2]?>" width="<?php echo $v_width?>" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 		<?php } ?>
 
@@ -152,7 +151,7 @@ $v_height = '240';  // 동영상 높이 지정
 				$v_logo = $board_skin_url."/video-js/logo.jpg";
 			}
 		?>
-			<video id="video_link" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" height="<?php echo $v_height?>" poster="<?php echo $v_logo?>" data-setup="{}">
+			<video id="video_link" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" poster="<?php echo $v_logo?>" data-setup="{}">
 			<source src="<?php echo $view['wr_4']?>" type='video/mp4' />
 			</video>
 		<?php } ?>
@@ -172,7 +171,7 @@ $v_height = '240';  // 동영상 높이 지정
                 symlink("/home/FTP/ams/video/".$view['wr_5'],$path);
             }
 		?>
-            <video id="video_link" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" height="<?php echo $v_height?>" poster="<?php echo $v_logo?>" data-setup="{}">
+            <video id="video_link" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $v_width?>" poster="<?php echo $v_logo?>" data-setup="{}">
             <source src="http://106.245.233.50:8080/<?php echo $view['wr_5']?>" type='video/mp4' />
             </video>
 <!--
@@ -284,8 +283,10 @@ $v_height = '240';  // 동영상 높이 지정
 
     <?php
     // 코멘트 입출력
-    include_once('./view_comment.php');
-     ?>
+    if (trim($board['bo_2'])) {
+        include_once('./view_comment.php');
+    }
+    ?>
 
     <div id="bo_v_bot">
         <!-- 링크 버튼 -->

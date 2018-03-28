@@ -26,7 +26,7 @@ if (isset($wr_id) && $wr_id) {
 
     // 그룹접근 사용
     if (isset($group['gr_use_access']) && $group['gr_use_access']) {
-        if ($is_guest) {
+        if ($is_guest || trim($board['bo_1'])) {
             $msg = "비회원은 이 게시판에 접근할 권한이 없습니다.\\n\\n회원이시라면 로그인 후 이용해 보십시오.";
             alert($msg, './login.php?wr_id='.$wr_id.$qstr.'&amp;url='.urlencode(G5_BBS_URL.'/board.php?bo_table='.$bo_table.'&amp;wr_id='.$wr_id.$qstr));
         }
