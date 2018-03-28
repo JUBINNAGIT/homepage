@@ -76,7 +76,6 @@ if (!$is_admin && $board['bo_use_secret'] == 2) {
 }
 
 $html = '';
-alert($_POST['html']);
 
 if (isset($_POST['html']) && $_POST['html']) {
     $html = $_POST['html'];
@@ -214,6 +213,7 @@ if ($w == '' || $w == 'r') {
     $option = $html;
     $option = ($option == '') ? $secret : $option + ',' + $secret;
     $option = ($option == '') ? $emil : $option + ',' + $mail;
+alert($option);
 
     $sql = " insert into $write_table
                 set wr_num = '$wr_num',
