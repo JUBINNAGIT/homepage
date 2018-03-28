@@ -212,7 +212,7 @@ if ($w == '' || $w == 'r') {
 
     $option = $html;
     $option = ($option == '') ? $secret : $option + ',' + $secret;
-    $option = ($option == '') ? $emil : $option + ',' + $mail;
+    $option = ($option == '') ? $mail : $option + ',' + $mail;
 
     $sql = " insert into $write_table
                 set wr_num = '$wr_num',
@@ -340,7 +340,7 @@ if ($w == '' || $w == 'r') {
 
     $option = $html;
     $option = ($option == '') ? $secret : $option + ',' + $secret;
-    $option = ($option == '') ? $emil : $option + ',' + $mail;
+    $option = ($option == '') ? $mail : $option + ',' + $mail;
 
 alert($option);
 
