@@ -134,14 +134,14 @@ $v_height = '377';  // 동영상 높이 지정
 		<!-- video start -->
 		<!-- youtube -->
 		<?php if($view[wr_1]){ ?>
-		<div style="margin:0 0 10px 0;"> 
+		<div style="margin: auto;"> 
 			<iframe width="<?php echo $v_width?>" height="<?php echo $v_height?>" src="http://www.youtube.com/embed/<?php echo $view[wr_1]?>?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<?php } ?>
 
 		<!-- vimeo -->
 		<?php if($view[wr_2]){ ?>
-		<div style="margin:0 0 10px 0;">
+		<div style="margin: auto;">
 			<iframe src="//player.vimeo.com/video/<?php echo $view[wr_2]?>" width="<?php echo $v_width?>" height="<?php echo $v_height?>" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 		<?php } ?>
@@ -165,7 +165,7 @@ $v_height = '377';  // 동영상 높이 지정
 			<source src="<?php echo $view['wr_4']?>" type='video/mp4' />
 			</video>
         -->
-            <div id="player" class="hdwhtml5player" style="height:360px; width:640px;"></div>
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px; margin: auto;"></div>
             <script type='text/javascript'>
                 hdwplayer({
                     id       : "player",
@@ -194,23 +194,7 @@ $v_height = '377';  // 동영상 높이 지정
 			}
 		?>
 
-<!--             <div id='video_link_rtmp'>This text will be replaced</div>
-            <script type='text/javascript'>
-                jwplayer("video_link_rtmp").setup({
-                    playlist: [{
-                        image: "<?php echo $v_logo?>",
-                        sources: [{ 
-                            file: "rtmp://106.245.233.50/<?php echo $view['wr_5']?>"
-                        }]
-                    }],
-                    height: <?php echo $v_height?>,
-                    primary: "flash",
-                    width: <?php echo $v_width?>
-                });
-            </script>
- -->            
-
-            <div id="player" class="hdwhtml5player" style="height:360px; width:640px;"></div>
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px; margin: auto;"></div>
             <script type='text/javascript'>
                 hdwplayer({
                     id       : "player",
@@ -239,7 +223,7 @@ $v_height = '377';  // 동영상 높이 지정
 				$v_logo = $board_skin_url."/video-js/logo.jpg";
 			}
 		?>
-            <div id="player" class="hdwhtml5player" style="height:360px; width:640px;"></div>
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px; margin: auto;"></div>
             <script type='text/javascript'>
                 hdwplayer({
                     id       : "player",
