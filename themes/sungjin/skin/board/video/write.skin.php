@@ -24,7 +24,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     <?php
     $option = '';
     $option_hidden = '';
-    if ($is_notice || $is_html || $is_secret || $is_mail) {
+    if ($is_notice || $is_html || $is_secret || $is_mail || $is_dhtml_editor) {
         $option = '';
         if ($is_notice) {
             $option .= "\n".'<input type="checkbox" id="notice" name="notice" value="1" '.$notice_checked.'>'."\n".'<label for="notice">공지</label>';
