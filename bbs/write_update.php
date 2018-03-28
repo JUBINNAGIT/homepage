@@ -211,8 +211,8 @@ if ($w == '' || $w == 'r') {
     }
 
     $option = $html;
-    $option = ($option == '') ? $secret : $option + ',' + $secret;
-    $option = ($option == '') ? $mail : $option + ',' + $mail;
+    $option = ($option == '') ? $secret : $option.','.$secret;
+    $option = ($option == '') ? $mail : $option.','.$mail;
 
     $sql = " insert into $write_table
                 set wr_num = '$wr_num',
@@ -339,8 +339,8 @@ if ($w == '' || $w == 'r') {
         $sql_ip = " , wr_ip = '{$_SERVER['REMOTE_ADDR']}' ";
 
     $option = $html;
-    $option = ($option == '') ? $secret : $option + ',' + $secret;
-    $option = ($option == '') ? $mail : $option + ',' + $mail;
+    $option = ($option == '') ? $secret : $option.','.$secret;
+    $option = ($option == '') ? $mail : $option .','.$mail;
 
     alert('html: '.$html.', option: '.$option);
 
