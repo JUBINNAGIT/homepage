@@ -91,7 +91,7 @@ if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
 </head>
-<body>
+<body  oncontextmenu="return false" ondragstart="return false", onselectstart="return false">
 <?php
 if ($is_member) { // 회원이라면 로그인 중이라는 메세지를 출력해준다.
     $sr_admin_msg = '';
