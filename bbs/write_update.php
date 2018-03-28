@@ -342,6 +342,8 @@ if ($w == '' || $w == 'r') {
     $option = ($option == '') ? $secret : $option + ',' + $secret;
     $option = ($option == '') ? $mail : $option + ',' + $mail;
 
+    alert($option);
+    
     $sql = " update {$write_table}
                 set ca_name = '$ca_name',
                      wr_option = '$option',
