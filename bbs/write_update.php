@@ -342,7 +342,7 @@ if ($w == '' || $w == 'r') {
     $option = ($option == '') ? $secret : $option + ',' + $secret;
     $option = ($option == '') ? $mail : $option + ',' + $mail;
 
-    alert('option: '.$option);
+    alert('html: '.$html.', option: '.$option);
 
     $sql = " update {$write_table}
                 set ca_name = '$ca_name',
