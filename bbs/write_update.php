@@ -213,7 +213,6 @@ if ($w == '' || $w == 'r') {
     $option = $html;
     $option = ($option == '') ? $secret : $option + ',' + $secret;
     $option = ($option == '') ? $emil : $option + ',' + $mail;
-alert($option);
 
     $sql = " insert into $write_table
                 set wr_num = '$wr_num',
@@ -338,6 +337,10 @@ alert($option);
     $sql_ip = '';
     if (!$is_admin)
         $sql_ip = " , wr_ip = '{$_SERVER['REMOTE_ADDR']}' ";
+
+    $option = $html;
+    $option = ($option == '') ? $secret : $option + ',' + $secret;
+    $option = ($option == '') ? $emil : $option + ',' + $mail;
 
     $sql = " update {$write_table}
                 set ca_name = '{$ca_name}',
