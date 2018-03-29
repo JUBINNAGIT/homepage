@@ -79,10 +79,11 @@ if ($is_admin) {
 }
 ?>
 </script>
-<script src="<?php echo G5_JS_URL ?>/jquery-1.8.3.min.js"></script>
+<script src="<?php echo G5_JS_URL ?>/jquery-3.3.1.js"></script>
 <script src="<?php echo G5_JS_URL ?>/jquery.menu.js"></script>
 <script src="<?php echo G5_JS_URL ?>/common.js"></script>
 <script src="<?php echo G5_JS_URL ?>/wrest.js"></script>
+<script src="<?php echo G5_JS_URL ?>/bootstrap.min.js"></script>
 <?php
 if(G5_IS_MOBILE) {
     echo '<script src="'.G5_JS_URL.'/modernizr.custom.70111.js"></script>'.PHP_EOL; // overflow scroll 감지

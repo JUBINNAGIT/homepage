@@ -9,7 +9,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
 <?php 
-$v_width = '70%';   // 동영상 넓이 지정
+$v_width = '90%';   // 동영상 넓이 지정
 ?>
 
 <!-- video-js -->
@@ -141,6 +141,54 @@ $v_width = '70%';   // 동영상 넓이 지정
 		<?php if($view[wr_3]){ ?>
 			<?php echo $view['wr_3']; ?>
 		<?php } ?>
+
+
+        <?php 
+        if ($view[file][0][file]) {  // 첨부파일1(썸네일이미지) 있는 경우
+            $v_logo = G5_URL."/data/file/".$bo_table."/".$view[file][0][file];
+        } else { 
+            $v_logo = $board_skin_url."/video-js/logo.jpg";
+        }
+        ?>
+        <div id="player" class="hdwhtml5player" style="height:360px; width:640px; margin: auto;"></div>
+        <script type='text/javascript'>
+            hdwplayer({
+                id       : "player",
+                swf      : "<?php echo $board_skin_url.'/player/player.swf?api=true'?>",
+                width    : "640",
+                height   : "360",
+        <?php
+        if($view[wr_4]){ 
+                echo 'video : "'.$view['wr_4'].'",';
+        } else if ($view[wr_5]){
+            $path = "/home/FTP/ams/www/".$view['wr_5'];
+
+            if (!file_exists($path)) {
+                symlink("/home/FTP/ams/video/".$view['wr_5'],$path);
+            }
+                echo 'video : "http://106.245.233.50:8080/'.$view['wr_5'].'",';
+        }
+        ?>
+
+
+            <div id="player" class="hdwhtml5player" style="height:360px; width:640px; margin: auto;"></div>
+            <script type='text/javascript'>
+                hdwplayer({
+                    id       : "player",
+                    swf      : "<?php echo $board_skin_url.'/player/player.swf?api=true'?>",
+                    width    : "640",
+                    height   : "360",
+                    video    : "<?=G5_URL."/data/file/".$bo_table."/".$view[file][1][file]?>",
+                    autoStart: "true",
+                    skinMode: "static",
+                    isHD: true,
+                    api : true,
+                    shareDock : false
+                });
+            </script>
+
+
+
 
 		<!-- 링크 동영상 video-js로 실행 -->
 		<?php 
