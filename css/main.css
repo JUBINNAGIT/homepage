@@ -127,8 +127,8 @@
   z-index: 8;
 }
 .design_shape .main_wrap .main {
-  background-image: url("../assets/img/main01.png"); 
   background-repeat: no-repeat;
+  background-image: url("../assets/img/main01.JPG");
   position: absolute;
   left: 60px;
   top: 83px;
