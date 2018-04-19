@@ -23,7 +23,11 @@ $admin_pass  = $_POST['admin_pass'];
 $admin_name  = $_POST['admin_name'];
 $admin_email = $_POST['admin_email'];
 
-$dblink = @mysql_connect($mysql_host, $mysql_user, $mysql_pass);
+if (PHP_VERSION_ID < 70000) {
+    $dblink = @mysql_connect($mysql_host, $mysql_user, $mysql_pass);
+} else {
+    $dblink = @mysqli_connect($mysql_host, $mysql_user, $mysql_pass);
+}
 if (!$dblink) {
 ?>
 
@@ -37,8 +41,13 @@ if (!$dblink) {
     exit;
 }
 
-$select_db = @mysql_select_db($mysql_db, $dblink);
+if (PHP_VERSION_ID < 70000) {
+    $select_db = @mysql_select_db($mysql_db, $dblink);
+} else {
+    $select_db = @mysqli_select_db($dblink, $mysql_db);
+}
 if (!$select_db) {
+    echo "Error: ".mysqli_error($dblink);
 ?>
 
 <div class="ins_inner">
@@ -52,11 +61,19 @@ if (!$select_db) {
 }
 
 $mysql_set_mode = 'false';
-@mysql_query('set names utf8');
-if(version_compare(mysql_get_server_info(), '5.6.6', '>=')  == 1) {
-    @mysql_query("SET SESSION sql_mode = ''");
-    $mysql_set_mode = 'true';
+if (PHP_VERSION_ID < 70000) {
+    @mysql_query('set names utf8');
+} else {
+    @mysqli_query($dblink, 'set names utf8');
 }
+
+if (PHP_VERSION_ID < 70000) {
+    @mysql_query("SET SESSION sql_mode = ''");
+} else {
+    @mysqli_query($dblink, "SET SESSION sql_mode = ''");
+}
+
+$mysql_set_mode = 'true';
 ?>
 
 <div class="ins_inner">
@@ -73,7 +90,11 @@ $file = preg_replace('/`g5_([^`]+`)/', '`'.$table_prefix.'$1', $file);
 $f = explode(';', $file);
 for ($i=0; $i<count($f); $i++) {
     if (trim($f[$i]) == '') continue;
-    mysql_query($f[$i]) or die(mysql_error());
+    if (PHP_VERSION_ID < 70000) {
+        mysql_query($f[$i]) or die(mysql_error());
+    } else {
+        mysqli_query($dblink, $f[$i]) or die(mysqli_error($dblink));
+    }
 }
 // 테이블 생성 ------------------------------------
 ?>
@@ -151,14 +172,22 @@ $sql = " insert into `{$table_prefix}config`
                 cf_stipulation = '해당 홈페이지에 맞는 회원가입약관을 입력합니다.',
                 cf_privacy = '해당 홈페이지에 맞는 개인정보처리방침을 입력합니다.'
                 ";
-mysql_query($sql) or die(mysql_error() . "<p>" . $sql);
+if (PHP_VERSION_ID < 70000) {
+    mysql_query($sql) or die(mysql_error() . "<p>" . $sql);
+} else {
+    mysqli_query($dblink, $sql) or die(mysqli_error($dblink) . "<p>" . $sql);
+}
 
 // 1:1문의 설정
 $sql = " insert into `{$table_prefix}qa_config`
             ( qa_title, qa_category, qa_skin, qa_mobile_skin, qa_use_email, qa_req_email, qa_use_hp, qa_req_hp, qa_use_editor, qa_subject_len, qa_mobile_subject_len, qa_page_rows, qa_mobile_page_rows, qa_image_width, qa_upload_size, qa_insert_content )
           values
             ( '1:1문의', '회원|포인트', 'basic', 'basic', '1', '0', '1', '0', '1', '60', '30', '15', '15', '600', '1048576', '' ) ";
-mysql_query($sql);
+if (PHP_VERSION_ID < 70000) {
+    mysql_query($sql);
+} else {
+    mysqli_query($dblink, $sql);
+}
 
 // 관리자 회원가입
 $sql = " insert into `{$table_prefix}member`
@@ -174,15 +203,29 @@ $sql = " insert into `{$table_prefix}member`
                  mb_datetime = '".G5_TIME_YMDHIS."',
                  mb_ip = '{$_SERVER['REMOTE_ADDR']}'
                  ";
-@mysql_query($sql);
+if (PHP_VERSION_ID < 70000) {
+    @mysql_query($sql);
+} else {
+    @mysqli_query($dblink, $sql);
+}
 
 // 내용관리 생성
-@mysql_query(" insert into `{$table_prefix}content` set co_id = 'company', co_html = '1', co_subject = '회사소개', co_content= '<p align=center><b>회사소개에 대한 내용을 입력하십시오.</b></p>' ") or die(mysql_error() . "<p>" . $sql);
-@mysql_query(" insert into `{$table_prefix}content` set co_id = 'privacy', co_html = '1', co_subject = '개인정보 처리방침', co_content= '<p align=center><b>개인정보 처리방침에 대한 내용을 입력하십시오.</b></p>' ") or die(mysql_error() . "<p>" . $sql);
-@mysql_query(" insert into `{$table_prefix}content` set co_id = 'provision', co_html = '1', co_subject = '서비스 이용약관', co_content= '<p align=center><b>서비스 이용약관에 대한 내용을 입력하십시오.</b></p>' ") or die(mysql_error() . "<p>" . $sql);
+if (PHP_VERSION_ID < 70000) {
+    @mysql_query(" insert into `{$table_prefix}content` set co_id = 'company', co_html = '1', co_subject = '회사소개', co_content= '<p align=center><b>회사소개에 대한 내용을 입력하십시오.</b></p>' ") or die(mysql_error() . "<p>" . $sql);
+    @mysql_query(" insert into `{$table_prefix}content` set co_id = 'privacy', co_html = '1', co_subject = '개인정보 처리방침', co_content= '<p align=center><b>개인정보 처리방침에 대한 내용을 입력하십시오.</b></p>' ") or die(mysql_error() . "<p>" . $sql);
+    @mysql_query(" insert into `{$table_prefix}content` set co_id = 'provision', co_html = '1', co_subject = '서비스 이용약관', co_content= '<p align=center><b>서비스 이용약관에 대한 내용을 입력하십시오.</b></p>' ") or die(mysql_error() . "<p>" . $sql);
 
-// FAQ Master
-@mysql_query(" insert into `{$table_prefix}faq_master` set fm_id = '1', fm_subject = '자주하시는 질문' ") or die(mysql_error() . "<p>" . $sql);
+    // FAQ Master
+    @mysql_query(" insert into `{$table_prefix}faq_master` set fm_id = '1', fm_subject = '자주하시는 질문' ") or die(mysqli_error() . "<p>" . $sql);
+} else {
+    @mysqli_query($dblink, " insert into `{$table_prefix}content` set co_id = 'company', co_html = '1', co_subject = '회사소개', co_content= '<p align=center><b>회사소개에 대한 내용을 입력하십시오.</b></p>' ") or die(mysqli_error($dblink) . "<p>" . $sql);
+    @mysqli_query($dblink, " insert into `{$table_prefix}content` set co_id = 'privacy', co_html = '1', co_subject = '개인정보 처리방침', co_content= '<p align=center><b>개인정보 처리방침에 대한 내용을 입력하십시오.</b></p>' ") or die(mysqli_error($dblink) . "<p>" . $sql);
+    @mysqli_query($dblink, " insert into `{$table_prefix}content` set co_id = 'provision', co_html = '1', co_subject = '서비스 이용약관', co_content= '<p align=center><b>서비스 이용약관에 대한 내용을 입력하십시오.</b></p>' ") or die(mysqli_error($dblink) . "<p>" . $sql);
+
+    // FAQ Master
+    @mysqli_query($dblink, " insert into `{$table_prefix}faq_master` set fm_id = '1', fm_subject = '자주하시는 질문' ") or die(mysqli_error($dblink) . "<p>" . $sql);
+
+}
 ?>
 
         <li>DB설정 완료</li>

@@ -26,11 +26,11 @@ $mail->Host     = "smtp1.example.com;smtp2.example.com";
 $mail->Mailer   = "smtp";
 
 @MYSQL_CONNECT("localhost","root","password");
-@mysql_select_db("my_company");
+@sql_select_db("my_company");
 $query  = "SELECT full_name, email, photo FROM employee WHERE id=$id";
 $result = @MYSQL_QUERY($query);
 
-while ($row = mysql_fetch_array ($result))
+while ($row = sql_fetch_array ($result))
 {
     // HTML body
     $body  = "Hello &lt;font size=\"4\"&gt;" . $row["full_name"] . "&lt;/font&gt;, &lt;p&gt;";
