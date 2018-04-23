@@ -155,7 +155,7 @@ define('G5_VIDEO_DIR_PERMISSION',  0777); // 동영상 디렉토리 생성시 �
 define('G5_FILE_PERMISSION', 0644); // 파일 생성시 퍼미션
 
 // 모바일 인지 결정 $_SERVER['HTTP_USER_AGENT']
-define('G5_MOBILE_AGENT',   'phone|samsung|lgtel|mobile|[^A]skt|nokia|blackberry|android|sony');
+define('G5_MOBILE_AGENT',   'phone|samsung|lgtel|mobile|[^A]skt|nokia|blackberry|android|sony|ipad');
 
 // SMTP
 // lib/mailer.lib.php 에서 사용
