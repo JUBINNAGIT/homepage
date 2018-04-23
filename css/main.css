@@ -227,12 +227,12 @@
 
 
 #footer {
-  position: absolute;
+  position: relative;
   left: 186px;
-  z-index: 15;
+  z-index: 20;
 }
 #footer.top{
-  top: 930px;
+  top: 148px;
 }
 
 #footer div {
