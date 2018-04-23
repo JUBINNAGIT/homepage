@@ -1490,12 +1490,11 @@ function sql_fetch($sql, $error=G5_DISPLAY_SQL_ERROR)
 // 결과값에서 한행 연관배열(이름으로)로 얻는다.
 function sql_fetch_array($result)
 {
-    global $g5;
 
     if (PHP_VERSION_ID < 70000) {
         $row = @mysql_fetch_assoc($result);
     } else {
-        $row = @mysqli_fetch_assoc($g5['connect_db'], $result);
+        $row = @mysqli_fetch_assoc($result);
     }
     return $row;
 }
@@ -1506,12 +1505,11 @@ function sql_fetch_array($result)
 // 단, 결과 값은 스크립트(script) 실행부가 종료되면서 메모리에서 자동적으로 지워진다.
 function sql_free_result($result)
 {
-    global $g5;
 
     if (PHP_VERSION_ID < 70000) {
         return mysql_free_result($result);
     } else {
-        return mysqli_free_result($g5['connect_db'], $result);
+        return mysqli_free_result($result);
     }
 }
 
