@@ -23,17 +23,31 @@ include_once($themes_path.'/head.php');
     <div class="design_shape">
         <!--div class="subject">Realize<br><font style="color:black">Bible</font></div>
         <div class="subject_">놀라운 성경이야기</div-->
-        <div class="page"></div>
-        <div class="btn"></div>
+        <!--div class="page"></div>
+        <div class="btn"></div-->
         <div class="visual_line"></div>
         <div class="shadow"></div>
 
         <div class="main_wrap">
             <div class="left"></div>
             <div class="right"></div>
-            <div class="main"></div>
+            <div class="main">
+                <img src="assets/img/main01.jpg" />
+                <img src="assets/img/main02.jpg" />
+                <img src="assets/img/main03.jpg" />
+                <img src="assets/img/main04.jpg" />
+                <img src="assets/img/main05.jpg" />
+            </div>
             <div class="line"></div>
             <div class="Layer_100"></div>
+            <script>
+                $(function(){
+                  $(".main img:gt(0)").hide(); // 첫째 이미지외에 모두 가리고.
+                  setInterval(  function(){
+                    $(".main :first-child").fadeOut(1000).next("img").fadeIn(1000).end().appendTo(".main");},
+                  10000);
+                });
+            </script>
         </div>
         <div class="gallery">
             <div class="title"></div>
