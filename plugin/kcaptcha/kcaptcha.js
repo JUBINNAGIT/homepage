@@ -24,7 +24,8 @@ $(function(){
                 }
             }
         });
-    }).trigger("click");
+    });
+    $("#captcha_reload").trigger("click");
 
     $(document).on("click", "#captcha_mp3", function(){
         $("body").css("cursor", "wait");

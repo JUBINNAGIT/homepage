@@ -237,7 +237,6 @@ function captcha_html($class="captcha")
 {
     $html .= "\n".'<script>var g5_captcha_url  = "'.G5_CAPTCHA_URL.'";</script>';
     //$html .= "\n".'<script>var g5_captcha_path = "'.G5_CAPTCHA_PATH.'";</script>';
-    $html .= "\n".'<script src="'.G5_CAPTCHA_URL.'/kcaptcha.js"></script>';
     $html .= "\n".'<fieldset id="captcha" class="'.$class.'">';
     $html .= "\n".'<legend><label for="captcha_key">자동등록방지</label></legend>';
     if (G5_IS_MOBILE) $html .= '<audio src="#" id="captcha_audio" controls></audio>';
@@ -248,6 +247,7 @@ function captcha_html($class="captcha")
     $html .= '<input type="text" name="captcha_key" id="captcha_key" required class="captcha_box required" size="6" maxlength="6">';
     $html .= "\n".'<span id="captcha_info">자동등록방지 숫자를 순서대로 입력하세요.</span>';
     $html .= "\n".'</fieldset>';
+    $html .= "\n".'<script src="'.G5_CAPTCHA_URL.'/kcaptcha.js"></script>';
     return $html;
 }
 
