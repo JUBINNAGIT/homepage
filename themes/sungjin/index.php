@@ -44,7 +44,7 @@ include_once($themes_path.'/head.php');
                 $(function(){
                   $(".main img:gt(0)").hide(); // 첫째 이미지외에 모두 가리고.
                   setInterval(  function(){
-                    $(".main :first-child").fadeOut(1000).next("img").fadeIn(1000).end().appendTo(".main");},
+                    $(".main :first-child").fadeOut(1000).next("img").fadeIn(1000).end().appendTo(".main").hide();},
                   10000);
                 });
             </script>
