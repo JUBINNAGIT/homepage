@@ -52,14 +52,14 @@ $(function() {
         );
     });
 
-    $("#add_manual").live("click", function() {
+    $(document).on("click", "#add_manual", function() {
         var me_name = $.trim($("#me_name").val());
         var me_link = $.trim($("#me_link").val());
 
         add_menu_list(me_name, me_link, "<?php echo $code; ?>");
     });
 
-    $(".add_select").live("click", function() {
+    $(document).on("click", ".add_select", function() {
         var me_name = $.trim($(this).siblings("input[name='subject[]']").val());
         var me_link = $.trim($(this).siblings("input[name='link[]']").val());
 
@@ -128,10 +128,10 @@ function add_menu_list(name, link, code)
     else
         $menu_last = $menulist.find("tr.menu_list:last");
 
-	if($menu_last.size() > 0) {
+	if($menu_last.length > 0) {
         $menu_last.after(list);
     } else {
-        if($menulist.find("#empty_menu_list").size() > 0)
+        if($menulist.find("#empty_menu_list").length > 0)
             $menulist.find("#empty_menu_list").remove();
 
         $menulist.find("table tbody").append(list);

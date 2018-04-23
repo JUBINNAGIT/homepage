@@ -1426,7 +1426,11 @@ function sql_connect($host, $user, $pass)
 {
     global $g5;
 
-    return @mysql_connect($host, $user, $pass);
+    if (PHP_VERSION_ID < 70000) {
+        return @mysql_connect($host, $user, $pass);
+    } else {
+        return @mysqli_connect($host, $user, $pass);
+    }
 }
 
 
@@ -1435,7 +1439,11 @@ function sql_select_db($db, $connect)
 {
     global $g5;
 
-    return @mysql_select_db($db, $connect);
+    if (PHP_VERSION_ID < 70000) {
+        return @mysql_select_db($db, $connect);
+    } else {
+        return @mysqli_select_db($connect, $db);
+    }
 }
 
 
@@ -1453,9 +1461,17 @@ function sql_query($sql, $error=G5_DISPLAY_SQL_ERROR)
     $sql = preg_replace("#^select.*from.*where.*`?information_schema`?.*#i", "select 1", $sql);
 
     if ($error)
-        $result = @mysql_query($sql, $g5['connect_db']) or die("<p>$sql<p>" . mysql_errno() . " : " .  mysql_error() . "<p>error file : {$_SERVER['PHP_SELF']}");
+        if (PHP_VERSION_ID < 70000) {
+            $result = @mysql_query($sql, $g5['connect_db']) or die("<p>$sql<p>" . mysql_errno() . " : " .  mysql_error() . "<p>error file : {$_SERVER['PHP_SELF']}");
+        } else {
+            $result = @mysqli_query($g5['connect_db'], $sql) or die("<p>$sql<p>" . mysqli_errno($g5['connect_db']) . " : " .  mysqli_error($g5['connect_db']) . "<p>error file : {$_SERVER['PHP_SELF']}");
+        }
     else
-        $result = @mysql_query($sql, $g5['connect_db']);
+        if (PHP_VERSION_ID < 70000) {
+            $result = @mysql_query($sql, $g5['connect_db']);
+        } else {
+            $result = @mysqli_query($g5['connect_db'], $sql);
+        }
 
     return $result;
 }
@@ -1474,7 +1490,12 @@ function sql_fetch($sql, $error=G5_DISPLAY_SQL_ERROR)
 // 결과값에서 한행 연관배열(이름으로)로 얻는다.
 function sql_fetch_array($result)
 {
-    $row = @mysql_fetch_assoc($result);
+
+    if (PHP_VERSION_ID < 70000) {
+        $row = @mysql_fetch_assoc($result);
+    } else {
+        $row = @mysqli_fetch_assoc($result);
+    }
     return $row;
 }
 
@@ -1484,7 +1505,12 @@ function sql_fetch_array($result)
 // 단, 결과 값은 스크립트(script) 실행부가 종료되면서 메모리에서 자동적으로 지워진다.
 function sql_free_result($result)
 {
-    return mysql_free_result($result);
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_free_result($result);
+    } else {
+        return mysqli_free_result($result);
+    }
 }
 
 
@@ -1497,6 +1523,71 @@ function sql_password($value)
     return $row['pass'];
 }
 
+function sql_insert_id()
+{
+    global $g5;
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_insert_id();
+    } else {
+        return mysqli_insert_id($g5['connect_db']);
+    }
+}
+
+function sql_num_rows($result)
+{
+    global $g5;
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_num_rows($result);
+    } else {
+        return mysqli_num_rows($g5['connect_db'], $result);
+    }
+}
+
+function sql_error()
+{
+    global $g5;
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_error();
+    } else {
+        return mysqli_error($g5['connect_db']);
+    }
+}
+
+function sql_list_fields($db, $table)
+{
+    global $g5;
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_list_fields($db, $table);
+    } else {
+        return mysqli_query($g5['connect_db'], "show columns from ".$table);
+    }
+}
+
+function sql_num_fields($fields)
+{
+    global $g5;
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_num_fields($fields);
+    } else {
+        return mysqli_field_count($g5['connect_db']);
+    }
+}
+
+function sql_field_name($fields, $i) {
+    global $g5;
+
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_field_name($fields, $i);
+    } else {
+        $fieldInfo = mysqli_fetch_field_direct($fields, $i);
+        return $fieldInfo->name;
+    }
+}
 
 // PHPMyAdmin 참고
 function get_table_define($table, $crlf="\n")
@@ -1507,6 +1598,7 @@ function get_table_define($table, $crlf="\n")
     $schema_create .= 'CREATE TABLE ' . $table . ' (' . $crlf;
 
     $sql = 'SHOW FIELDS FROM ' . $table;
+
     $result = sql_query($sql);
     while ($row = sql_fetch_array($result))
     {
@@ -1903,7 +1995,11 @@ function sql_real_escape_string($field)
 {
     global $g5;
 
-    return mysql_real_escape_string($field, $g5['connect_db']);
+    if (PHP_VERSION_ID < 70000) {
+        return mysql_real_escape_string($field, $g5['connect_db']);
+    } else {
+        return mysqli_real_escape_string($field, $g5['connect_db']);
+    }
 }
 
 function escape_trim($field)

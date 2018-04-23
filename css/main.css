@@ -128,7 +128,6 @@
 }
 .design_shape .main_wrap .main {
   background-repeat: no-repeat;
-  background-image: url("../assets/img/main01_.png");
   position: absolute;
   left: 60px;
   top: 83px;
@@ -228,12 +227,12 @@
 
 
 #footer {
-  position: absolute;
+  position: relative;
   left: 186px;
-  z-index: 15;
+  z-index: 20;
 }
 #footer.top{
-  top: 930px;
+  top: 148px;
 }
 
 #footer div {

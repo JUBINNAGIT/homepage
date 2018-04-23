@@ -170,10 +170,10 @@ document.onkeydown = noRefresh ;
 
         // member table 복사
         $columns = array();
-        $fields = mysql_list_fields(G5_MYSQL_DB, $g5['member_table']);
-        $count = mysql_num_fields($fields);
+        $fields = sql_list_fields(G5_MYSQL_DB, $g5['member_table']);
+        $count = sql_num_fields($fields);
         for ($i = 0; $i < $count; $i++) {
-            $fld = mysql_field_name($fields, $i);
+            $fld = sql_field_name($fields, $i);
             $columns[] = $fld;
         }
 
@@ -326,10 +326,10 @@ document.onkeydown = noRefresh ;
 
         // group table 복사
         $columns = array();
-        $fields = mysql_list_fields(G5_MYSQL_DB, $g5['group_table']);
-        $count = mysql_num_fields($fields);
+        $fields = sql_list_fields(G5_MYSQL_DB, $g5['group_table']);
+        $count = sql_num_fields($fields);
         for ($i = 0; $i < $count; $i++) {
-            $fld = mysql_field_name($fields, $i);
+            $fld = sql_field_name($fields, $i);
             $columns[] = $fld;
         }
 
@@ -366,10 +366,10 @@ document.onkeydown = noRefresh ;
 
         // board 복사
         $columns = array();
-        $fields = mysql_list_fields(G5_MYSQL_DB, $g5['board_table']);
-        $count = mysql_num_fields($fields);
+        $fields = sql_list_fields(G5_MYSQL_DB, $g5['board_table']);
+        $count = sql_num_fields($fields);
         for ($i = 0; $i < $count; $i++) {
-            $fld = mysql_field_name($fields, $i);
+            $fld = sql_field_name($fields, $i);
             $columns[] = $fld;
         }
 
@@ -414,10 +414,10 @@ document.onkeydown = noRefresh ;
             if(sql_query($sql, FALSE)) {
                 $write_table = $g4['write_prefix'].$bo_table;
                 $columns2 = array();
-                $fields2 = mysql_list_fields(G5_MYSQL_DB, $create_table);
-                $count2 = mysql_num_fields($fields2);
+                $fields2 = sql_list_fields(G5_MYSQL_DB, $create_table);
+                $count2 = sql_num_fields($fields2);
                 for ($j = 0; $j < $count2; $j++) {
-                    $fld = mysql_field_name($fields2, $j);
+                    $fld = sql_field_name($fields2, $j);
                     $columns2[] = $fld;
                 }
 
@@ -462,10 +462,10 @@ document.onkeydown = noRefresh ;
 
         foreach($tables as $table) {
             $columns = array();
-            $fields = mysql_list_fields(G5_MYSQL_DB, $g5[$table.'_table']);
-            $count = mysql_num_fields($fields);
+            $fields = sql_list_fields(G5_MYSQL_DB, $g5[$table.'_table']);
+            $count = sql_num_fields($fields);
             for ($i = 0; $i < $count; $i++) {
-                $fld = mysql_field_name($fields, $i);
+                $fld = sql_field_name($fields, $i);
                 $columns[] = $fld;
             }
 

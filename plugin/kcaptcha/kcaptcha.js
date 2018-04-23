@@ -1,7 +1,7 @@
 $(function(){
     var mp3_url = "";
 
-    $("#captcha_reload").live("click", function(){
+    $(document).on("click", "#captcha_reload", function(){
         $.ajax({
             type: 'POST',
             url: g5_captcha_url+'/kcaptcha_session.php',
@@ -26,7 +26,7 @@ $(function(){
         });
     }).trigger("click");
 
-    $("#captcha_mp3").live("click", function(){
+    $(document).on("click", "#captcha_mp3", function(){
         $("body").css("cursor", "wait");
 
         $.ajax({
