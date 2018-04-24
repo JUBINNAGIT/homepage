@@ -106,7 +106,7 @@ function latest_gallery($skin_dir='', $offset=0, $rows=10, $subject_len=40, $cac
     if(!G5_USE_CACHE || $cache_fwrite) {
         $lists = array();
         $sql = "select a.bo_table,bo_subject,wr_id,bf_file from `{$g5['board_table']}` a left join `{$g5['board_file_table']}` b on (a.bo_table=b.bo_table)
-                    where a.bo_device <> 'mobile' and a.bo_skin = 'gallery'";
+                    where a.bo_device <> 'mobile' and a.bo_skin = 'gallery' order by bf_datetime desc";
         $result = sql_query($sql);
         for ($i=0; $row=sql_fetch_array($result); $i++) {
             $list = array();

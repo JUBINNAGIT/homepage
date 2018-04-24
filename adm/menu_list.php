@@ -132,24 +132,24 @@ $colspan = 7;
 
 <script>
 $(function() {
-    $(".btn_add_submenu").live("click", function() {
+    $(document).on("click", ".btn_add_submenu", function() {
         var code = $(this).closest("tr").find("input[name='code[]']").val().substr(0, 2);
         add_submenu(code);
     });
 
-    $(".btn_del_menu").live("click", function() {
+    $(document).on("click", ".btn_del_menu", function() {
         if(!confirm("메뉴를 삭제하시겠습니까?"))
             return false;
 
         var $tr = $(this).closest("tr");
-        if($tr.find("td.sub_menu_class").size() > 0) {
+        if($tr.find("td.sub_menu_class").length > 0) {
             $tr.remove();
         } else {
             var code = $(this).closest("tr").find("input[name='code[]']").val().substr(0, 2);
             $("tr.menu_group_"+code).remove();
         }
 
-        if($("#menulist tr.menu_list").size() < 1) {
+        if($("#menulist tr.menu_list").length < 1) {
             var list = "<tr id=\"empty_menu_list\"><td colspan=\"<?php echo $colspan; ?>\" class=\"empty_table\">자료가 없습니다.</td></tr>\n";
             $("#menulist table tbody").append(list);
         } else {
